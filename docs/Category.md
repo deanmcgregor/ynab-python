@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **category_group_id** | **str** |  | 
 **name** | **str** |  | 
 **hidden** | **bool** | Whether or not the category is hidden | 
+**note** | **str** |  | 
 **budgeted** | **float** | Budgeted amount in current month in milliunits format | 
 **activity** | **float** | Activity amount in current month in milliunits format | 
 **balance** | **float** | Balance in current month in milliunits format | 

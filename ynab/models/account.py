@@ -36,6 +36,7 @@ class Account(object):
         'type': 'str',
         'on_budget': 'bool',
         'closed': 'bool',
+        'note': 'str',
         'balance': 'float',
         'cleared_balance': 'float',
         'uncleared_balance': 'float'
@@ -47,12 +48,13 @@ class Account(object):
         'type': 'type',
         'on_budget': 'on_budget',
         'closed': 'closed',
+        'note': 'note',
         'balance': 'balance',
         'cleared_balance': 'cleared_balance',
         'uncleared_balance': 'uncleared_balance'
     }
 
-    def __init__(self, id=None, name=None, type=None, on_budget=None, closed=None, balance=None, cleared_balance=None, uncleared_balance=None):  # noqa: E501
+    def __init__(self, id=None, name=None, type=None, on_budget=None, closed=None, note=None, balance=None, cleared_balance=None, uncleared_balance=None):  # noqa: E501
         """Account - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -60,6 +62,7 @@ class Account(object):
         self._type = None
         self._on_budget = None
         self._closed = None
+        self._note = None
         self._balance = None
         self._cleared_balance = None
         self._uncleared_balance = None
@@ -70,6 +73,7 @@ class Account(object):
         self.type = type
         self.on_budget = on_budget
         self.closed = closed
+        self.note = note
         self.balance = balance
         self.cleared_balance = cleared_balance
         self.uncleared_balance = uncleared_balance
@@ -198,6 +202,29 @@ class Account(object):
             raise ValueError("Invalid value for `closed`, must not be `None`")  # noqa: E501
 
         self._closed = closed
+
+    @property
+    def note(self):
+        """Gets the note of this Account.  # noqa: E501
+
+
+        :return: The note of this Account.  # noqa: E501
+        :rtype: str
+        """
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        """Sets the note of this Account.
+
+
+        :param note: The note of this Account.  # noqa: E501
+        :type: str
+        """
+        if note is None:
+            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
+
+        self._note = note
 
     @property
     def balance(self):

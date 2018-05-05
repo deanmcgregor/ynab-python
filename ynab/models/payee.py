@@ -32,23 +32,27 @@ class Payee(object):
     """
     swagger_types = {
         'id': 'str',
-        'name': 'str'
+        'name': 'str',
+        'transfer_account_id': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'name': 'name'
+        'name': 'name',
+        'transfer_account_id': 'transfer_account_id'
     }
 
-    def __init__(self, id=None, name=None):  # noqa: E501
+    def __init__(self, id=None, name=None, transfer_account_id=None):  # noqa: E501
         """Payee - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._name = None
+        self._transfer_account_id = None
         self.discriminator = None
 
         self.id = id
         self.name = name
+        self.transfer_account_id = transfer_account_id
 
     @property
     def id(self):
@@ -95,6 +99,31 @@ class Payee(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def transfer_account_id(self):
+        """Gets the transfer_account_id of this Payee.  # noqa: E501
+
+        If a transfer payee, the account_id to which this payee transfers to  # noqa: E501
+
+        :return: The transfer_account_id of this Payee.  # noqa: E501
+        :rtype: str
+        """
+        return self._transfer_account_id
+
+    @transfer_account_id.setter
+    def transfer_account_id(self, transfer_account_id):
+        """Sets the transfer_account_id of this Payee.
+
+        If a transfer payee, the account_id to which this payee transfers to  # noqa: E501
+
+        :param transfer_account_id: The transfer_account_id of this Payee.  # noqa: E501
+        :type: str
+        """
+        if transfer_account_id is None:
+            raise ValueError("Invalid value for `transfer_account_id`, must not be `None`")  # noqa: E501
+
+        self._transfer_account_id = transfer_account_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

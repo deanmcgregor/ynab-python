@@ -47,6 +47,7 @@ class BudgetDetail(object):
     swagger_types = {
         'id': 'str',
         'name': 'str',
+        'last_modified_on': 'datetime',
         'date_format': 'DateFormat',
         'currency_format': 'CurrencyFormat',
         'accounts': 'list[Account]',
@@ -64,6 +65,7 @@ class BudgetDetail(object):
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'last_modified_on': 'last_modified_on',
         'date_format': 'date_format',
         'currency_format': 'currency_format',
         'accounts': 'accounts',
@@ -78,11 +80,12 @@ class BudgetDetail(object):
         'scheduled_subtransactions': 'scheduled_subtransactions'
     }
 
-    def __init__(self, id=None, name=None, date_format=None, currency_format=None, accounts=None, payees=None, payee_locations=None, category_groups=None, categories=None, months=None, transactions=None, subtransactions=None, scheduled_transactions=None, scheduled_subtransactions=None):  # noqa: E501
+    def __init__(self, id=None, name=None, last_modified_on=None, date_format=None, currency_format=None, accounts=None, payees=None, payee_locations=None, category_groups=None, categories=None, months=None, transactions=None, subtransactions=None, scheduled_transactions=None, scheduled_subtransactions=None):  # noqa: E501
         """BudgetDetail - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._name = None
+        self._last_modified_on = None
         self._date_format = None
         self._currency_format = None
         self._accounts = None
@@ -99,6 +102,8 @@ class BudgetDetail(object):
 
         self.id = id
         self.name = name
+        if last_modified_on is not None:
+            self.last_modified_on = last_modified_on
         if date_format is not None:
             self.date_format = date_format
         if currency_format is not None:
@@ -169,6 +174,29 @@ class BudgetDetail(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def last_modified_on(self):
+        """Gets the last_modified_on of this BudgetDetail.  # noqa: E501
+
+        The last time any changes were made to the budget from either a web or mobile client.  # noqa: E501
+
+        :return: The last_modified_on of this BudgetDetail.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._last_modified_on
+
+    @last_modified_on.setter
+    def last_modified_on(self, last_modified_on):
+        """Sets the last_modified_on of this BudgetDetail.
+
+        The last time any changes were made to the budget from either a web or mobile client.  # noqa: E501
+
+        :param last_modified_on: The last_modified_on of this BudgetDetail.  # noqa: E501
+        :type: datetime
+        """
+
+        self._last_modified_on = last_modified_on
 
     @property
     def date_format(self):

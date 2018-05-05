@@ -34,35 +34,65 @@ class SaveTransaction(object):
         'account_id': 'str',
         'date': 'date',
         'amount': 'float',
+        'payee_id': 'str',
+        'payee_name': 'str',
+        'category_id': 'str',
+        'memo': 'str',
         'cleared': 'str',
-        'approved': 'bool'
+        'approved': 'bool',
+        'flag_color': 'str',
+        'import_id': 'str'
     }
 
     attribute_map = {
         'account_id': 'account_id',
         'date': 'date',
         'amount': 'amount',
+        'payee_id': 'payee_id',
+        'payee_name': 'payee_name',
+        'category_id': 'category_id',
+        'memo': 'memo',
         'cleared': 'cleared',
-        'approved': 'approved'
+        'approved': 'approved',
+        'flag_color': 'flag_color',
+        'import_id': 'import_id'
     }
 
-    def __init__(self, account_id=None, date=None, amount=None, cleared=None, approved=None):  # noqa: E501
+    def __init__(self, account_id=None, date=None, amount=None, payee_id=None, payee_name=None, category_id=None, memo=None, cleared=None, approved=None, flag_color=None, import_id=None):  # noqa: E501
         """SaveTransaction - a model defined in Swagger"""  # noqa: E501
 
         self._account_id = None
         self._date = None
         self._amount = None
+        self._payee_id = None
+        self._payee_name = None
+        self._category_id = None
+        self._memo = None
         self._cleared = None
         self._approved = None
+        self._flag_color = None
+        self._import_id = None
         self.discriminator = None
 
         self.account_id = account_id
         self.date = date
         self.amount = amount
+        if payee_id is not None:
+            self.payee_id = payee_id
+        if payee_name is not None:
+            self.payee_name = payee_name
+        if category_id is not None:
+            self.category_id = category_id
+        if memo is not None:
+            self.memo = memo
         if cleared is not None:
             self.cleared = cleared
         if approved is not None:
             self.approved = approved
+        if flag_color is not None:
+            self.flag_color = flag_color
+        if import_id is not None:
+            self.import_id = import_id
 
     @property
     def account_id(self):
@@ -136,6 +166,96 @@ class SaveTransaction(object):
         self._amount = amount
 
     @property
+    def payee_id(self):
+        """Gets the payee_id of this SaveTransaction.  # noqa: E501
+
+        The payee for the transaction.  Transfer payees are not permitted and will be ignored if supplied.  # noqa: E501
+
+        :return: The payee_id of this SaveTransaction.  # noqa: E501
+        :rtype: str
+        """
+        return self._payee_id
+
+    @payee_id.setter
+    def payee_id(self, payee_id):
+        """Sets the payee_id of this SaveTransaction.
+
+        The payee for the transaction.  Transfer payees are not permitted and will be ignored if supplied.  # noqa: E501
+
+        :param payee_id: The payee_id of this SaveTransaction.  # noqa: E501
+        :type: str
+        """
+
+        self._payee_id = payee_id
+
+    @property
+    def payee_name(self):
+        """Gets the payee_name of this SaveTransaction.  # noqa: E501
+
+        The payee name.  If a payee_name value is provided and payee_id is not included or has a null value, payee_name will be used to create or use an existing payee.  # noqa: E501
+
+        :return: The payee_name of this SaveTransaction.  # noqa: E501
+        :rtype: str
+        """
+        return self._payee_name
+
+    @payee_name.setter
+    def payee_name(self, payee_name):
+        """Sets the payee_name of this SaveTransaction.
+
+        The payee name.  If a payee_name value is provided and payee_id is not included or has a null value, payee_name will be used to create or use an existing payee.  # noqa: E501
+
+        :param payee_name: The payee_name of this SaveTransaction.  # noqa: E501
+        :type: str
+        """
+
+        self._payee_name = payee_name
+
+    @property
+    def category_id(self):
+        """Gets the category_id of this SaveTransaction.  # noqa: E501
+
+        The category for the transaction.  Split and Credit Card Payment categories are not permitted and will be ignored if supplied.  # noqa: E501
+
+        :return: The category_id of this SaveTransaction.  # noqa: E501
+        :rtype: str
+        """
+        return self._category_id
+
+    @category_id.setter
+    def category_id(self, category_id):
+        """Sets the category_id of this SaveTransaction.
+
+        The category for the transaction.  Split and Credit Card Payment categories are not permitted and will be ignored if supplied.  # noqa: E501
+
+        :param category_id: The category_id of this SaveTransaction.  # noqa: E501
+        :type: str
+        """
+
+        self._category_id = category_id
+
+    @property
+    def memo(self):
+        """Gets the memo of this SaveTransaction.  # noqa: E501
+
+
+        :return: The memo of this SaveTransaction.  # noqa: E501
+        :rtype: str
+        """
+        return self._memo
+
+    @memo.setter
+    def memo(self, memo):
+        """Sets the memo of this SaveTransaction.
+
+
+        :param memo: The memo of this SaveTransaction.  # noqa: E501
+        :type: str
+        """
+
+        self._memo = memo
+
+    @property
     def cleared(self):
         """Gets the cleared of this SaveTransaction.  # noqa: E501
 
@@ -186,6 +306,58 @@ class SaveTransaction(object):
         """
 
         self._approved = approved
+
+    @property
+    def flag_color(self):
+        """Gets the flag_color of this SaveTransaction.  # noqa: E501
+
+        The transaction flag  # noqa: E501
+
+        :return: The flag_color of this SaveTransaction.  # noqa: E501
+        :rtype: str
+        """
+        return self._flag_color
+
+    @flag_color.setter
+    def flag_color(self, flag_color):
+        """Sets the flag_color of this SaveTransaction.
+
+        The transaction flag  # noqa: E501
+
+        :param flag_color: The flag_color of this SaveTransaction.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["red", "orange", "yellow", "green", "blue", "purple"]  # noqa: E501
+        if flag_color not in allowed_values:
+            raise ValueError(
+                "Invalid value for `flag_color` ({0}), must be one of {1}"  # noqa: E501
+                .format(flag_color, allowed_values)
+            )
+
+        self._flag_color = flag_color
+
+    @property
+    def import_id(self):
+        """Gets the import_id of this SaveTransaction.  # noqa: E501
+
+        If specified for a new transaction, the transaction will be treated as Imported and assigned this import_id.  If another transaction on the same account with this same import_id is later attempted to be created, it will be skipped to prevent duplication.  Transactions imported through File Based Import or Direct Import and not through the API, are assigned an import_id in the format: 'YNAB:[milliunit_amount]:[iso_date]:[occurrence]'.  For example, a transaction dated 2015-12-30 in the amount of -$294.23 USD would have an import_id of 'YNAB:-294230:2015-12-30:1'.  If a second transaction on the same account was imported and had the same date and same amount, its import_id would be 'YNAB:-294230:2015-12-30:2'.  Using a consistent format will prevent duplicates through Direct Import and File Based Import.  If import_id is specified as null, the transaction will be treated as a user entered transaction.  # noqa: E501
+
+        :return: The import_id of this SaveTransaction.  # noqa: E501
+        :rtype: str
+        """
+        return self._import_id
+
+    @import_id.setter
+    def import_id(self, import_id):
+        """Sets the import_id of this SaveTransaction.
+
+        If specified for a new transaction, the transaction will be treated as Imported and assigned this import_id.  If another transaction on the same account with this same import_id is later attempted to be created, it will be skipped to prevent duplication.  Transactions imported through File Based Import or Direct Import and not through the API, are assigned an import_id in the format: 'YNAB:[milliunit_amount]:[iso_date]:[occurrence]'.  For example, a transaction dated 2015-12-30 in the amount of -$294.23 USD would have an import_id of 'YNAB:-294230:2015-12-30:1'.  If a second transaction on the same account was imported and had the same date and same amount, its import_id would be 'YNAB:-294230:2015-12-30:2'.  Using a consistent format will prevent duplicates through Direct Import and File Based Import.  If import_id is specified as null, the transaction will be treated as a user entered transaction.  # noqa: E501
+
+        :param import_id: The import_id of this SaveTransaction.  # noqa: E501
+        :type: str
+        """
+
+        self._import_id = import_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,20 +31,32 @@ class MonthSummary(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'month': 'date'
+        'month': 'date',
+        'note': 'str',
+        'to_be_budgeted': 'float',
+        'age_of_money': 'float'
     }
 
     attribute_map = {
-        'month': 'month'
+        'month': 'month',
+        'note': 'note',
+        'to_be_budgeted': 'to_be_budgeted',
+        'age_of_money': 'age_of_money'
     }
 
-    def __init__(self, month=None):  # noqa: E501
+    def __init__(self, month=None, note=None, to_be_budgeted=None, age_of_money=None):  # noqa: E501
         """MonthSummary - a model defined in Swagger"""  # noqa: E501
 
         self._month = None
+        self._note = None
+        self._to_be_budgeted = None
+        self._age_of_money = None
         self.discriminator = None
 
         self.month = month
+        self.note = note
+        self.to_be_budgeted = to_be_budgeted
+        self.age_of_money = age_of_money
 
     @property
     def month(self):
@@ -68,6 +80,77 @@ class MonthSummary(object):
             raise ValueError("Invalid value for `month`, must not be `None`")  # noqa: E501
 
         self._month = month
+
+    @property
+    def note(self):
+        """Gets the note of this MonthSummary.  # noqa: E501
+
+
+        :return: The note of this MonthSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        """Sets the note of this MonthSummary.
+
+
+        :param note: The note of this MonthSummary.  # noqa: E501
+        :type: str
+        """
+        if note is None:
+            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
+
+        self._note = note
+
+    @property
+    def to_be_budgeted(self):
+        """Gets the to_be_budgeted of this MonthSummary.  # noqa: E501
+
+        The current balance of the account in milliunits format  # noqa: E501
+
+        :return: The to_be_budgeted of this MonthSummary.  # noqa: E501
+        :rtype: float
+        """
+        return self._to_be_budgeted
+
+    @to_be_budgeted.setter
+    def to_be_budgeted(self, to_be_budgeted):
+        """Sets the to_be_budgeted of this MonthSummary.
+
+        The current balance of the account in milliunits format  # noqa: E501
+
+        :param to_be_budgeted: The to_be_budgeted of this MonthSummary.  # noqa: E501
+        :type: float
+        """
+        if to_be_budgeted is None:
+            raise ValueError("Invalid value for `to_be_budgeted`, must not be `None`")  # noqa: E501
+
+        self._to_be_budgeted = to_be_budgeted
+
+    @property
+    def age_of_money(self):
+        """Gets the age_of_money of this MonthSummary.  # noqa: E501
+
+
+        :return: The age_of_money of this MonthSummary.  # noqa: E501
+        :rtype: float
+        """
+        return self._age_of_money
+
+    @age_of_money.setter
+    def age_of_money(self, age_of_money):
+        """Sets the age_of_money of this MonthSummary.
+
+
+        :param age_of_money: The age_of_money of this MonthSummary.  # noqa: E501
+        :type: float
+        """
+        if age_of_money is None:
+            raise ValueError("Invalid value for `age_of_money`, must not be `None`")  # noqa: E501
+
+        self._age_of_money = age_of_money
 
     def to_dict(self):
         """Returns the model properties as a dict"""

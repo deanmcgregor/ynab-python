@@ -34,37 +34,61 @@ class TransactionSummary(object):
         'id': 'str',
         'date': 'date',
         'amount': 'float',
+        'memo': 'str',
         'cleared': 'str',
         'approved': 'bool',
-        'account_id': 'str'
+        'flag_color': 'str',
+        'account_id': 'str',
+        'payee_id': 'str',
+        'category_id': 'str',
+        'transfer_account_id': 'str',
+        'import_id': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'date': 'date',
         'amount': 'amount',
+        'memo': 'memo',
         'cleared': 'cleared',
         'approved': 'approved',
-        'account_id': 'account_id'
+        'flag_color': 'flag_color',
+        'account_id': 'account_id',
+        'payee_id': 'payee_id',
+        'category_id': 'category_id',
+        'transfer_account_id': 'transfer_account_id',
+        'import_id': 'import_id'
     }
 
-    def __init__(self, id=None, date=None, amount=None, cleared=None, approved=None, account_id=None):  # noqa: E501
+    def __init__(self, id=None, date=None, amount=None, memo=None, cleared=None, approved=None, flag_color=None, account_id=None, payee_id=None, category_id=None, transfer_account_id=None, import_id=None):  # noqa: E501
         """TransactionSummary - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._date = None
         self._amount = None
+        self._memo = None
         self._cleared = None
         self._approved = None
+        self._flag_color = None
         self._account_id = None
+        self._payee_id = None
+        self._category_id = None
+        self._transfer_account_id = None
+        self._import_id = None
         self.discriminator = None
 
         self.id = id
         self.date = date
         self.amount = amount
+        self.memo = memo
         self.cleared = cleared
         self.approved = approved
+        self.flag_color = flag_color
         self.account_id = account_id
+        self.payee_id = payee_id
+        self.category_id = category_id
+        self.transfer_account_id = transfer_account_id
+        self.import_id = import_id
 
     @property
     def id(self):
@@ -138,6 +162,29 @@ class TransactionSummary(object):
         self._amount = amount
 
     @property
+    def memo(self):
+        """Gets the memo of this TransactionSummary.  # noqa: E501
+
+
+        :return: The memo of this TransactionSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._memo
+
+    @memo.setter
+    def memo(self, memo):
+        """Sets the memo of this TransactionSummary.
+
+
+        :param memo: The memo of this TransactionSummary.  # noqa: E501
+        :type: str
+        """
+        if memo is None:
+            raise ValueError("Invalid value for `memo`, must not be `None`")  # noqa: E501
+
+        self._memo = memo
+
+    @property
     def cleared(self):
         """Gets the cleared of this TransactionSummary.  # noqa: E501
 
@@ -194,6 +241,37 @@ class TransactionSummary(object):
         self._approved = approved
 
     @property
+    def flag_color(self):
+        """Gets the flag_color of this TransactionSummary.  # noqa: E501
+
+        The transaction flag  # noqa: E501
+
+        :return: The flag_color of this TransactionSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._flag_color
+
+    @flag_color.setter
+    def flag_color(self, flag_color):
+        """Sets the flag_color of this TransactionSummary.
+
+        The transaction flag  # noqa: E501
+
+        :param flag_color: The flag_color of this TransactionSummary.  # noqa: E501
+        :type: str
+        """
+        if flag_color is None:
+            raise ValueError("Invalid value for `flag_color`, must not be `None`")  # noqa: E501
+        allowed_values = ["red", "orange", "yellow", "green", "blue", "purple"]  # noqa: E501
+        if flag_color not in allowed_values:
+            raise ValueError(
+                "Invalid value for `flag_color` ({0}), must be one of {1}"  # noqa: E501
+                .format(flag_color, allowed_values)
+            )
+
+        self._flag_color = flag_color
+
+    @property
     def account_id(self):
         """Gets the account_id of this TransactionSummary.  # noqa: E501
 
@@ -215,6 +293,100 @@ class TransactionSummary(object):
             raise ValueError("Invalid value for `account_id`, must not be `None`")  # noqa: E501
 
         self._account_id = account_id
+
+    @property
+    def payee_id(self):
+        """Gets the payee_id of this TransactionSummary.  # noqa: E501
+
+
+        :return: The payee_id of this TransactionSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._payee_id
+
+    @payee_id.setter
+    def payee_id(self, payee_id):
+        """Sets the payee_id of this TransactionSummary.
+
+
+        :param payee_id: The payee_id of this TransactionSummary.  # noqa: E501
+        :type: str
+        """
+        if payee_id is None:
+            raise ValueError("Invalid value for `payee_id`, must not be `None`")  # noqa: E501
+
+        self._payee_id = payee_id
+
+    @property
+    def category_id(self):
+        """Gets the category_id of this TransactionSummary.  # noqa: E501
+
+
+        :return: The category_id of this TransactionSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._category_id
+
+    @category_id.setter
+    def category_id(self, category_id):
+        """Sets the category_id of this TransactionSummary.
+
+
+        :param category_id: The category_id of this TransactionSummary.  # noqa: E501
+        :type: str
+        """
+        if category_id is None:
+            raise ValueError("Invalid value for `category_id`, must not be `None`")  # noqa: E501
+
+        self._category_id = category_id
+
+    @property
+    def transfer_account_id(self):
+        """Gets the transfer_account_id of this TransactionSummary.  # noqa: E501
+
+
+        :return: The transfer_account_id of this TransactionSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._transfer_account_id
+
+    @transfer_account_id.setter
+    def transfer_account_id(self, transfer_account_id):
+        """Sets the transfer_account_id of this TransactionSummary.
+
+
+        :param transfer_account_id: The transfer_account_id of this TransactionSummary.  # noqa: E501
+        :type: str
+        """
+        if transfer_account_id is None:
+            raise ValueError("Invalid value for `transfer_account_id`, must not be `None`")  # noqa: E501
+
+        self._transfer_account_id = transfer_account_id
+
+    @property
+    def import_id(self):
+        """Gets the import_id of this TransactionSummary.  # noqa: E501
+
+        If the Transaction was imported, this field is a unique (by account) import identifier.  If this transaction was imported through File Based Import or Direct Import and not through the API, the import_id will have the format: 'YNAB:[milliunit_amount]:[iso_date]:[occurrence]'.  For example, a transaction dated 2015-12-30 in the amount of -$294.23 USD would have an import_id of 'YNAB:-294230:2015-12-30:1'.  If a second transaction on the same account was imported and had the same date and same amount, its import_id would be 'YNAB:-294230:2015-12-30:2'.  # noqa: E501
+
+        :return: The import_id of this TransactionSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._import_id
+
+    @import_id.setter
+    def import_id(self, import_id):
+        """Sets the import_id of this TransactionSummary.
+
+        If the Transaction was imported, this field is a unique (by account) import identifier.  If this transaction was imported through File Based Import or Direct Import and not through the API, the import_id will have the format: 'YNAB:[milliunit_amount]:[iso_date]:[occurrence]'.  For example, a transaction dated 2015-12-30 in the amount of -$294.23 USD would have an import_id of 'YNAB:-294230:2015-12-30:1'.  If a second transaction on the same account was imported and had the same date and same amount, its import_id would be 'YNAB:-294230:2015-12-30:2'.  # noqa: E501
+
+        :param import_id: The import_id of this TransactionSummary.  # noqa: E501
+        :type: str
+        """
+        if import_id is None:
+            raise ValueError("Invalid value for `import_id`, must not be `None`")  # noqa: E501
+
+        self._import_id = import_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

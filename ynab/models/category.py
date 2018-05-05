@@ -35,6 +35,7 @@ class Category(object):
         'category_group_id': 'str',
         'name': 'str',
         'hidden': 'bool',
+        'note': 'str',
         'budgeted': 'float',
         'activity': 'float',
         'balance': 'float'
@@ -45,18 +46,20 @@ class Category(object):
         'category_group_id': 'category_group_id',
         'name': 'name',
         'hidden': 'hidden',
+        'note': 'note',
         'budgeted': 'budgeted',
         'activity': 'activity',
         'balance': 'balance'
     }
 
-    def __init__(self, id=None, category_group_id=None, name=None, hidden=None, budgeted=None, activity=None, balance=None):  # noqa: E501
+    def __init__(self, id=None, category_group_id=None, name=None, hidden=None, note=None, budgeted=None, activity=None, balance=None):  # noqa: E501
         """Category - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._category_group_id = None
         self._name = None
         self._hidden = None
+        self._note = None
         self._budgeted = None
         self._activity = None
         self._balance = None
@@ -66,6 +69,7 @@ class Category(object):
         self.category_group_id = category_group_id
         self.name = name
         self.hidden = hidden
+        self.note = note
         self.budgeted = budgeted
         self.activity = activity
         self.balance = balance
@@ -163,6 +167,29 @@ class Category(object):
             raise ValueError("Invalid value for `hidden`, must not be `None`")  # noqa: E501
 
         self._hidden = hidden
+
+    @property
+    def note(self):
+        """Gets the note of this Category.  # noqa: E501
+
+
+        :return: The note of this Category.  # noqa: E501
+        :rtype: str
+        """
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        """Sets the note of this Category.
+
+
+        :param note: The note of this Category.  # noqa: E501
+        :type: str
+        """
+        if note is None:
+            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
+
+        self._note = note
 
     @property
     def budgeted(self):
