@@ -186,9 +186,6 @@ class Category(object):
         :param note: The note of this Category.  # noqa: E501
         :type: str
         """
-        if note is None:
-            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
-
         self._note = note
 
     @property
