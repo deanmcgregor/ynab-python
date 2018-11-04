@@ -55,9 +55,11 @@ from ynab.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-ynab.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = ynab.Configuration()
+
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# ynab.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = ynab.AccountsApi()
 budget_id = 'budget_id_example' # str | The ID of the Budget.
