@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**get_payee_locations**](PayeeLocationsApi.md#get_payee_locations) | **GET** /budgets/{budget_id}/payee_locations | List payee locations
 [**get_payee_locations_by_payee**](PayeeLocationsApi.md#get_payee_locations_by_payee) | **GET** /budgets/{budget_id}/payees/{payee_id}/payee_locations | List locations for a payee
 
-
 # **get_payee_location_by_id**
 > PayeeLocationResponse get_payee_location_by_id(budget_id, payee_location_id)
 
@@ -32,8 +31,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = ynab.PayeeLocationsApi(ynab.ApiClient(configuration))
-budget_id = 'budget_id_example' # str | The ID of the Budget.
-payee_location_id = 'payee_location_id_example' # str | ID of payee location
+budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
+payee_location_id = 'payee_location_id_example' # str | id of payee location
 
 try:
     # Single payee location
@@ -47,8 +46,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | [**str**](.md)| The ID of the Budget. | 
- **payee_location_id** | [**str**](.md)| ID of payee location | 
+ **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **payee_location_id** | **str**| id of payee location | 
 
 ### Return type
 
@@ -88,7 +87,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = ynab.PayeeLocationsApi(ynab.ApiClient(configuration))
-budget_id = 'budget_id_example' # str | The ID of the Budget.
+budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
 
 try:
     # List payee locations
@@ -102,7 +101,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | [**str**](.md)| The ID of the Budget. | 
+ **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
 
 ### Return type
 
@@ -142,8 +141,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = ynab.PayeeLocationsApi(ynab.ApiClient(configuration))
-budget_id = 'budget_id_example' # str | The ID of the Budget.
-payee_id = 'payee_id_example' # str | ID of payee
+budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
+payee_id = 'payee_id_example' # str | id of payee
 
 try:
     # List locations for a payee
@@ -157,8 +156,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | [**str**](.md)| The ID of the Budget. | 
- **payee_id** | [**str**](.md)| ID of payee | 
+ **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **payee_id** | **str**| id of payee | 
 
 ### Return type
 
