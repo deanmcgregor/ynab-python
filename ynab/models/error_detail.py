@@ -68,8 +68,7 @@ class ErrorDetail(object):
         :param id: The id of this ErrorDetail.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+        
 
         self._id = id
 
@@ -91,8 +90,7 @@ class ErrorDetail(object):
         :param name: The name of this ErrorDetail.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+        
 
         self._name = name
 
@@ -114,8 +112,7 @@ class ErrorDetail(object):
         :param detail: The detail of this ErrorDetail.  # noqa: E501
         :type: str
         """
-        if detail is None:
-            raise ValueError("Invalid value for `detail`, must not be `None`")  # noqa: E501
+        
 
         self._detail = detail
 

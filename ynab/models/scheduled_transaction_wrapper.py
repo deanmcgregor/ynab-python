@@ -61,8 +61,7 @@ class ScheduledTransactionWrapper(object):
         :param scheduled_transaction: The scheduled_transaction of this ScheduledTransactionWrapper.  # noqa: E501
         :type: ScheduledTransactionDetail
         """
-        if scheduled_transaction is None:
-            raise ValueError("Invalid value for `scheduled_transaction`, must not be `None`")  # noqa: E501
+        
 
         self._scheduled_transaction = scheduled_transaction
 

@@ -61,8 +61,7 @@ class SaveMonthCategoryWrapper(object):
         :param category: The category of this SaveMonthCategoryWrapper.  # noqa: E501
         :type: SaveMonthCategory
         """
-        if category is None:
-            raise ValueError("Invalid value for `category`, must not be `None`")  # noqa: E501
+        
 
         self._category = category
 

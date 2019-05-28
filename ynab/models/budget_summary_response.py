@@ -61,8 +61,7 @@ class BudgetSummaryResponse(object):
         :param data: The data of this BudgetSummaryResponse.  # noqa: E501
         :type: BudgetSummaryWrapper
         """
-        if data is None:
-            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
+        
 
         self._data = data
 

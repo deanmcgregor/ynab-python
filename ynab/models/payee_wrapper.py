@@ -61,8 +61,7 @@ class PayeeWrapper(object):
         :param payee: The payee of this PayeeWrapper.  # noqa: E501
         :type: Payee
         """
-        if payee is None:
-            raise ValueError("Invalid value for `payee`, must not be `None`")  # noqa: E501
+        
 
         self._payee = payee
 

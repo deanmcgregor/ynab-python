@@ -72,8 +72,7 @@ class Payee(object):
         :param id: The id of this Payee.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+        
 
         self._id = id
 
@@ -95,8 +94,7 @@ class Payee(object):
         :param name: The name of this Payee.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+        
 
         self._name = name
 
@@ -120,8 +118,7 @@ class Payee(object):
         :param transfer_account_id: The transfer_account_id of this Payee.  # noqa: E501
         :type: str
         """
-        if transfer_account_id is None:
-            raise ValueError("Invalid value for `transfer_account_id`, must not be `None`")  # noqa: E501
+        
 
         self._transfer_account_id = transfer_account_id
 
@@ -145,8 +142,7 @@ class Payee(object):
         :param deleted: The deleted of this Payee.  # noqa: E501
         :type: bool
         """
-        if deleted is None:
-            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
+        
 
         self._deleted = deleted
 

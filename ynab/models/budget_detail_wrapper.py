@@ -65,8 +65,7 @@ class BudgetDetailWrapper(object):
         :param budget: The budget of this BudgetDetailWrapper.  # noqa: E501
         :type: BudgetDetail
         """
-        if budget is None:
-            raise ValueError("Invalid value for `budget`, must not be `None`")  # noqa: E501
+        
 
         self._budget = budget
 
@@ -90,8 +89,7 @@ class BudgetDetailWrapper(object):
         :param server_knowledge: The server_knowledge of this BudgetDetailWrapper.  # noqa: E501
         :type: int
         """
-        if server_knowledge is None:
-            raise ValueError("Invalid value for `server_knowledge`, must not be `None`")  # noqa: E501
+        
 
         self._server_knowledge = server_knowledge
 

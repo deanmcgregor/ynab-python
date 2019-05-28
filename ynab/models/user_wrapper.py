@@ -61,8 +61,7 @@ class UserWrapper(object):
         :param user: The user of this UserWrapper.  # noqa: E501
         :type: User
         """
-        if user is None:
-            raise ValueError("Invalid value for `user`, must not be `None`")  # noqa: E501
+        
 
         self._user = user
 

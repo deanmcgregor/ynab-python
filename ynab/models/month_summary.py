@@ -88,8 +88,7 @@ class MonthSummary(object):
         :param month: The month of this MonthSummary.  # noqa: E501
         :type: date
         """
-        if month is None:
-            raise ValueError("Invalid value for `month`, must not be `None`")  # noqa: E501
+        
 
         self._month = month
 
@@ -111,8 +110,7 @@ class MonthSummary(object):
         :param note: The note of this MonthSummary.  # noqa: E501
         :type: str
         """
-        if note is None:
-            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
+        
 
         self._note = note
 
@@ -136,8 +134,7 @@ class MonthSummary(object):
         :param income: The income of this MonthSummary.  # noqa: E501
         :type: int
         """
-        if income is None:
-            raise ValueError("Invalid value for `income`, must not be `None`")  # noqa: E501
+        
 
         self._income = income
 
@@ -161,8 +158,7 @@ class MonthSummary(object):
         :param budgeted: The budgeted of this MonthSummary.  # noqa: E501
         :type: int
         """
-        if budgeted is None:
-            raise ValueError("Invalid value for `budgeted`, must not be `None`")  # noqa: E501
+        
 
         self._budgeted = budgeted
 
@@ -186,8 +182,7 @@ class MonthSummary(object):
         :param activity: The activity of this MonthSummary.  # noqa: E501
         :type: int
         """
-        if activity is None:
-            raise ValueError("Invalid value for `activity`, must not be `None`")  # noqa: E501
+        
 
         self._activity = activity
 
@@ -211,8 +206,7 @@ class MonthSummary(object):
         :param to_be_budgeted: The to_be_budgeted of this MonthSummary.  # noqa: E501
         :type: int
         """
-        if to_be_budgeted is None:
-            raise ValueError("Invalid value for `to_be_budgeted`, must not be `None`")  # noqa: E501
+        
 
         self._to_be_budgeted = to_be_budgeted
 
@@ -236,8 +230,7 @@ class MonthSummary(object):
         :param age_of_money: The age_of_money of this MonthSummary.  # noqa: E501
         :type: int
         """
-        if age_of_money is None:
-            raise ValueError("Invalid value for `age_of_money`, must not be `None`")  # noqa: E501
+        
 
         self._age_of_money = age_of_money
 
@@ -261,8 +254,7 @@ class MonthSummary(object):
         :param deleted: The deleted of this MonthSummary.  # noqa: E501
         :type: bool
         """
-        if deleted is None:
-            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
+        
 
         self._deleted = deleted
 

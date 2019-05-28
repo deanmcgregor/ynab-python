@@ -61,8 +61,7 @@ class ErrorResponse(object):
         :param error: The error of this ErrorResponse.  # noqa: E501
         :type: ErrorDetail
         """
-        if error is None:
-            raise ValueError("Invalid value for `error`, must not be `None`")  # noqa: E501
+        
 
         self._error = error
 

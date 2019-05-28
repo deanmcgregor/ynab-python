@@ -65,8 +65,7 @@ class TransactionsWrapper(object):
         :param transactions: The transactions of this TransactionsWrapper.  # noqa: E501
         :type: list[TransactionDetail]
         """
-        if transactions is None:
-            raise ValueError("Invalid value for `transactions`, must not be `None`")  # noqa: E501
+        
 
         self._transactions = transactions
 
@@ -90,8 +89,7 @@ class TransactionsWrapper(object):
         :param server_knowledge: The server_knowledge of this TransactionsWrapper.  # noqa: E501
         :type: int
         """
-        if server_knowledge is None:
-            raise ValueError("Invalid value for `server_knowledge`, must not be `None`")  # noqa: E501
+        
 
         self._server_knowledge = server_knowledge
 

@@ -61,8 +61,7 @@ class UserResponse(object):
         :param data: The data of this UserResponse.  # noqa: E501
         :type: UserWrapper
         """
-        if data is None:
-            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
+        
 
         self._data = data
 

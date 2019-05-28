@@ -88,8 +88,7 @@ class SubTransaction(object):
         :param id: The id of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+        
 
         self._id = id
 
@@ -111,8 +110,7 @@ class SubTransaction(object):
         :param transaction_id: The transaction_id of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if transaction_id is None:
-            raise ValueError("Invalid value for `transaction_id`, must not be `None`")  # noqa: E501
+        
 
         self._transaction_id = transaction_id
 
@@ -136,8 +134,7 @@ class SubTransaction(object):
         :param amount: The amount of this SubTransaction.  # noqa: E501
         :type: int
         """
-        if amount is None:
-            raise ValueError("Invalid value for `amount`, must not be `None`")  # noqa: E501
+        
 
         self._amount = amount
 
@@ -159,8 +156,7 @@ class SubTransaction(object):
         :param memo: The memo of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if memo is None:
-            raise ValueError("Invalid value for `memo`, must not be `None`")  # noqa: E501
+        
 
         self._memo = memo
 
@@ -182,8 +178,7 @@ class SubTransaction(object):
         :param payee_id: The payee_id of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if payee_id is None:
-            raise ValueError("Invalid value for `payee_id`, must not be `None`")  # noqa: E501
+        
 
         self._payee_id = payee_id
 
@@ -205,8 +200,7 @@ class SubTransaction(object):
         :param category_id: The category_id of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if category_id is None:
-            raise ValueError("Invalid value for `category_id`, must not be `None`")  # noqa: E501
+        
 
         self._category_id = category_id
 
@@ -230,8 +224,7 @@ class SubTransaction(object):
         :param transfer_account_id: The transfer_account_id of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if transfer_account_id is None:
-            raise ValueError("Invalid value for `transfer_account_id`, must not be `None`")  # noqa: E501
+        
 
         self._transfer_account_id = transfer_account_id
 
@@ -255,8 +248,7 @@ class SubTransaction(object):
         :param deleted: The deleted of this SubTransaction.  # noqa: E501
         :type: bool
         """
-        if deleted is None:
-            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
+        
 
         self._deleted = deleted
 

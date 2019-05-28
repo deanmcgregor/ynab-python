@@ -65,8 +65,7 @@ class CategoryGroupsWrapper(object):
         :param category_groups: The category_groups of this CategoryGroupsWrapper.  # noqa: E501
         :type: list[CategoryGroupWithCategories]
         """
-        if category_groups is None:
-            raise ValueError("Invalid value for `category_groups`, must not be `None`")  # noqa: E501
+        
 
         self._category_groups = category_groups
 
@@ -90,8 +89,7 @@ class CategoryGroupsWrapper(object):
         :param server_knowledge: The server_knowledge of this CategoryGroupsWrapper.  # noqa: E501
         :type: int
         """
-        if server_knowledge is None:
-            raise ValueError("Invalid value for `server_knowledge`, must not be `None`")  # noqa: E501
+        
 
         self._server_knowledge = server_knowledge
 

@@ -61,8 +61,7 @@ class BudgetSummaryWrapper(object):
         :param budgets: The budgets of this BudgetSummaryWrapper.  # noqa: E501
         :type: list[BudgetSummary]
         """
-        if budgets is None:
-            raise ValueError("Invalid value for `budgets`, must not be `None`")  # noqa: E501
+        
 
         self._budgets = budgets
 

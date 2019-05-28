@@ -64,8 +64,7 @@ class MonthDetail(MonthSummary):
         :param categories: The categories of this MonthDetail.  # noqa: E501
         :type: list[Category]
         """
-        if categories is None:
-            raise ValueError("Invalid value for `categories`, must not be `None`")  # noqa: E501
+        
 
         self._categories = categories
 

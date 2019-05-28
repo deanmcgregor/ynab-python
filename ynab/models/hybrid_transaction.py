@@ -79,8 +79,7 @@ class HybridTransaction(TransactionSummary):
         :param type: The type of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        
         allowed_values = ["transaction", "subtransaction"]  # noqa: E501
         if type not in allowed_values:
             raise ValueError(
@@ -110,8 +109,7 @@ class HybridTransaction(TransactionSummary):
         :param parent_transaction_id: The parent_transaction_id of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        if parent_transaction_id is None:
-            raise ValueError("Invalid value for `parent_transaction_id`, must not be `None`")  # noqa: E501
+        
 
         self._parent_transaction_id = parent_transaction_id
 
@@ -133,8 +131,7 @@ class HybridTransaction(TransactionSummary):
         :param account_name: The account_name of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        if account_name is None:
-            raise ValueError("Invalid value for `account_name`, must not be `None`")  # noqa: E501
+        
 
         self._account_name = account_name
 
@@ -156,8 +153,7 @@ class HybridTransaction(TransactionSummary):
         :param payee_name: The payee_name of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        if payee_name is None:
-            raise ValueError("Invalid value for `payee_name`, must not be `None`")  # noqa: E501
+        
 
         self._payee_name = payee_name
 
@@ -179,8 +175,7 @@ class HybridTransaction(TransactionSummary):
         :param category_name: The category_name of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        if category_name is None:
-            raise ValueError("Invalid value for `category_name`, must not be `None`")  # noqa: E501
+        
 
         self._category_name = category_name
 

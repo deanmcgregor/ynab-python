@@ -62,8 +62,7 @@ class SaveMonthCategory(object):
         :param budgeted: The budgeted of this SaveMonthCategory.  # noqa: E501
         :type: int
         """
-        if budgeted is None:
-            raise ValueError("Invalid value for `budgeted`, must not be `None`")  # noqa: E501
+        
 
         self._budgeted = budgeted
 

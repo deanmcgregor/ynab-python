@@ -61,8 +61,7 @@ class BulkResponse(object):
         :param data: The data of this BulkResponse.  # noqa: E501
         :type: BulkIdWrapper
         """
-        if data is None:
-            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
+        
 
         self._data = data
 

@@ -65,8 +65,7 @@ class PayeesWrapper(object):
         :param payees: The payees of this PayeesWrapper.  # noqa: E501
         :type: list[Payee]
         """
-        if payees is None:
-            raise ValueError("Invalid value for `payees`, must not be `None`")  # noqa: E501
+        
 
         self._payees = payees
 
@@ -90,8 +89,7 @@ class PayeesWrapper(object):
         :param server_knowledge: The server_knowledge of this PayeesWrapper.  # noqa: E501
         :type: int
         """
-        if server_knowledge is None:
-            raise ValueError("Invalid value for `server_knowledge`, must not be `None`")  # noqa: E501
+        
 
         self._server_knowledge = server_knowledge
 

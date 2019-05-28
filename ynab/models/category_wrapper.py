@@ -61,8 +61,7 @@ class CategoryWrapper(object):
         :param category: The category of this CategoryWrapper.  # noqa: E501
         :type: Category
         """
-        if category is None:
-            raise ValueError("Invalid value for `category`, must not be `None`")  # noqa: E501
+        
 
         self._category = category
 

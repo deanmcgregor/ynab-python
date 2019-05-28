@@ -66,8 +66,7 @@ class BudgetSettings(object):
         :param date_format: The date_format of this BudgetSettings.  # noqa: E501
         :type: DateFormat
         """
-        if date_format is None:
-            raise ValueError("Invalid value for `date_format`, must not be `None`")  # noqa: E501
+        
 
         self._date_format = date_format
 
@@ -89,8 +88,7 @@ class BudgetSettings(object):
         :param currency_format: The currency_format of this BudgetSettings.  # noqa: E501
         :type: CurrencyFormat
         """
-        if currency_format is None:
-            raise ValueError("Invalid value for `currency_format`, must not be `None`")  # noqa: E501
+        
 
         self._currency_format = currency_format
 

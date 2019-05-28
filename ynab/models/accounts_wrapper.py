@@ -65,8 +65,7 @@ class AccountsWrapper(object):
         :param accounts: The accounts of this AccountsWrapper.  # noqa: E501
         :type: list[Account]
         """
-        if accounts is None:
-            raise ValueError("Invalid value for `accounts`, must not be `None`")  # noqa: E501
+        
 
         self._accounts = accounts
 
@@ -90,8 +89,7 @@ class AccountsWrapper(object):
         :param server_knowledge: The server_knowledge of this AccountsWrapper.  # noqa: E501
         :type: int
         """
-        if server_knowledge is None:
-            raise ValueError("Invalid value for `server_knowledge`, must not be `None`")  # noqa: E501
+        
 
         self._server_knowledge = server_knowledge
 

@@ -61,8 +61,7 @@ class TransactionWrapper(object):
         :param transaction: The transaction of this TransactionWrapper.  # noqa: E501
         :type: TransactionDetail
         """
-        if transaction is None:
-            raise ValueError("Invalid value for `transaction`, must not be `None`")  # noqa: E501
+        
 
         self._transaction = transaction
 

@@ -60,8 +60,7 @@ class DateFormat(object):
         :param format: The format of this DateFormat.  # noqa: E501
         :type: str
         """
-        if format is None:
-            raise ValueError("Invalid value for `format`, must not be `None`")  # noqa: E501
+        
 
         self._format = format
 

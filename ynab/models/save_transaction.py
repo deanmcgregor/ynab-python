@@ -108,8 +108,7 @@ class SaveTransaction(object):
         :param account_id: The account_id of this SaveTransaction.  # noqa: E501
         :type: str
         """
-        if account_id is None:
-            raise ValueError("Invalid value for `account_id`, must not be `None`")  # noqa: E501
+        
 
         self._account_id = account_id
 
@@ -131,8 +130,7 @@ class SaveTransaction(object):
         :param _date: The _date of this SaveTransaction.  # noqa: E501
         :type: date
         """
-        if _date is None:
-            raise ValueError("Invalid value for `_date`, must not be `None`")  # noqa: E501
+        
 
         self.__date = _date
 
@@ -156,8 +154,7 @@ class SaveTransaction(object):
         :param amount: The amount of this SaveTransaction.  # noqa: E501
         :type: int
         """
-        if amount is None:
-            raise ValueError("Invalid value for `amount`, must not be `None`")  # noqa: E501
+        
 
         self._amount = amount
 

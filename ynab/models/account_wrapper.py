@@ -61,8 +61,7 @@ class AccountWrapper(object):
         :param account: The account of this AccountWrapper.  # noqa: E501
         :type: Account
         """
-        if account is None:
-            raise ValueError("Invalid value for `account`, must not be `None`")  # noqa: E501
+        
 
         self._account = account
 

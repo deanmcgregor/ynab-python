@@ -100,8 +100,7 @@ class Account(object):
         :param id: The id of this Account.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+        
 
         self._id = id
 
@@ -123,8 +122,7 @@ class Account(object):
         :param name: The name of this Account.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+        
 
         self._name = name
 
@@ -148,8 +146,7 @@ class Account(object):
         :param type: The type of this Account.  # noqa: E501
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        
         allowed_values = ["checking", "savings", "cash", "creditCard", "lineOfCredit", "otherAsset", "otherLiability", "payPal", "merchantAccount", "investmentAccount", "mortgage"]  # noqa: E501
         if type not in allowed_values:
             raise ValueError(
@@ -179,8 +176,7 @@ class Account(object):
         :param on_budget: The on_budget of this Account.  # noqa: E501
         :type: bool
         """
-        if on_budget is None:
-            raise ValueError("Invalid value for `on_budget`, must not be `None`")  # noqa: E501
+        
 
         self._on_budget = on_budget
 
@@ -204,8 +200,7 @@ class Account(object):
         :param closed: The closed of this Account.  # noqa: E501
         :type: bool
         """
-        if closed is None:
-            raise ValueError("Invalid value for `closed`, must not be `None`")  # noqa: E501
+        
 
         self._closed = closed
 
@@ -227,8 +222,7 @@ class Account(object):
         :param note: The note of this Account.  # noqa: E501
         :type: str
         """
-        if note is None:
-            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
+        
 
         self._note = note
 
@@ -252,8 +246,7 @@ class Account(object):
         :param balance: The balance of this Account.  # noqa: E501
         :type: int
         """
-        if balance is None:
-            raise ValueError("Invalid value for `balance`, must not be `None`")  # noqa: E501
+        
 
         self._balance = balance
 
@@ -277,8 +270,7 @@ class Account(object):
         :param cleared_balance: The cleared_balance of this Account.  # noqa: E501
         :type: int
         """
-        if cleared_balance is None:
-            raise ValueError("Invalid value for `cleared_balance`, must not be `None`")  # noqa: E501
+        
 
         self._cleared_balance = cleared_balance
 
@@ -302,8 +294,7 @@ class Account(object):
         :param uncleared_balance: The uncleared_balance of this Account.  # noqa: E501
         :type: int
         """
-        if uncleared_balance is None:
-            raise ValueError("Invalid value for `uncleared_balance`, must not be `None`")  # noqa: E501
+        
 
         self._uncleared_balance = uncleared_balance
 
@@ -327,8 +318,7 @@ class Account(object):
         :param transfer_payee_id: The transfer_payee_id of this Account.  # noqa: E501
         :type: str
         """
-        if transfer_payee_id is None:
-            raise ValueError("Invalid value for `transfer_payee_id`, must not be `None`")  # noqa: E501
+        
 
         self._transfer_payee_id = transfer_payee_id
 
@@ -352,8 +342,7 @@ class Account(object):
         :param deleted: The deleted of this Account.  # noqa: E501
         :type: bool
         """
-        if deleted is None:
-            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
+        
 
         self._deleted = deleted
 

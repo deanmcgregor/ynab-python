@@ -61,8 +61,7 @@ class BulkIdWrapper(object):
         :param bulk: The bulk of this BulkIdWrapper.  # noqa: E501
         :type: BulkIds
         """
-        if bulk is None:
-            raise ValueError("Invalid value for `bulk`, must not be `None`")  # noqa: E501
+        
 
         self._bulk = bulk
 

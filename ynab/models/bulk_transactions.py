@@ -61,8 +61,7 @@ class BulkTransactions(object):
         :param transactions: The transactions of this BulkTransactions.  # noqa: E501
         :type: list[SaveTransaction]
         """
-        if transactions is None:
-            raise ValueError("Invalid value for `transactions`, must not be `None`")  # noqa: E501
+        
 
         self._transactions = transactions
 

@@ -61,8 +61,7 @@ class MonthDetailWrapper(object):
         :param month: The month of this MonthDetailWrapper.  # noqa: E501
         :type: MonthDetail
         """
-        if month is None:
-            raise ValueError("Invalid value for `month`, must not be `None`")  # noqa: E501
+        
 
         self._month = month
 

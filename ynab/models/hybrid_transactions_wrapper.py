@@ -61,8 +61,7 @@ class HybridTransactionsWrapper(object):
         :param transactions: The transactions of this HybridTransactionsWrapper.  # noqa: E501
         :type: list[HybridTransaction]
         """
-        if transactions is None:
-            raise ValueError("Invalid value for `transactions`, must not be `None`")  # noqa: E501
+        
 
         self._transactions = transactions
 

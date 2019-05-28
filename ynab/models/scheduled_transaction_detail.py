@@ -74,8 +74,7 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         :param account_name: The account_name of this ScheduledTransactionDetail.  # noqa: E501
         :type: str
         """
-        if account_name is None:
-            raise ValueError("Invalid value for `account_name`, must not be `None`")  # noqa: E501
+        
 
         self._account_name = account_name
 
@@ -97,8 +96,7 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         :param payee_name: The payee_name of this ScheduledTransactionDetail.  # noqa: E501
         :type: str
         """
-        if payee_name is None:
-            raise ValueError("Invalid value for `payee_name`, must not be `None`")  # noqa: E501
+        
 
         self._payee_name = payee_name
 
@@ -120,8 +118,7 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         :param category_name: The category_name of this ScheduledTransactionDetail.  # noqa: E501
         :type: str
         """
-        if category_name is None:
-            raise ValueError("Invalid value for `category_name`, must not be `None`")  # noqa: E501
+        
 
         self._category_name = category_name
 
@@ -145,8 +142,7 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         :param subtransactions: The subtransactions of this ScheduledTransactionDetail.  # noqa: E501
         :type: list[ScheduledSubTransaction]
         """
-        if subtransactions is None:
-            raise ValueError("Invalid value for `subtransactions`, must not be `None`")  # noqa: E501
+        
 
         self._subtransactions = subtransactions
 

@@ -61,8 +61,7 @@ class PayeeLocationWrapper(object):
         :param payee_location: The payee_location of this PayeeLocationWrapper.  # noqa: E501
         :type: PayeeLocation
         """
-        if payee_location is None:
-            raise ValueError("Invalid value for `payee_location`, must not be `None`")  # noqa: E501
+        
 
         self._payee_location = payee_location
 

@@ -61,8 +61,7 @@ class BudgetSettingsWrapper(object):
         :param settings: The settings of this BudgetSettingsWrapper.  # noqa: E501
         :type: BudgetSettings
         """
-        if settings is None:
-            raise ValueError("Invalid value for `settings`, must not be `None`")  # noqa: E501
+        
 
         self._settings = settings
 

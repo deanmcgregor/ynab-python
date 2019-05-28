@@ -61,8 +61,7 @@ class AccountResponse(object):
         :param data: The data of this AccountResponse.  # noqa: E501
         :type: AccountWrapper
         """
-        if data is None:
-            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
+        
 
         self._data = data
 

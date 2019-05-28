@@ -66,8 +66,7 @@ class BulkIds(object):
         :param transaction_ids: The transaction_ids of this BulkIds.  # noqa: E501
         :type: list[str]
         """
-        if transaction_ids is None:
-            raise ValueError("Invalid value for `transaction_ids`, must not be `None`")  # noqa: E501
+        
 
         self._transaction_ids = transaction_ids
 
@@ -91,8 +90,7 @@ class BulkIds(object):
         :param duplicate_import_ids: The duplicate_import_ids of this BulkIds.  # noqa: E501
         :type: list[str]
         """
-        if duplicate_import_ids is None:
-            raise ValueError("Invalid value for `duplicate_import_ids`, must not be `None`")  # noqa: E501
+        
 
         self._duplicate_import_ids = duplicate_import_ids
 

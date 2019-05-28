@@ -65,8 +65,7 @@ class MonthSummariesWrapper(object):
         :param months: The months of this MonthSummariesWrapper.  # noqa: E501
         :type: list[MonthSummary]
         """
-        if months is None:
-            raise ValueError("Invalid value for `months`, must not be `None`")  # noqa: E501
+        
 
         self._months = months
 
@@ -90,8 +89,7 @@ class MonthSummariesWrapper(object):
         :param server_knowledge: The server_knowledge of this MonthSummariesWrapper.  # noqa: E501
         :type: int
         """
-        if server_knowledge is None:
-            raise ValueError("Invalid value for `server_knowledge`, must not be `None`")  # noqa: E501
+        
 
         self._server_knowledge = server_knowledge
 

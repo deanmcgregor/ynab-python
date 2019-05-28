@@ -88,8 +88,7 @@ class CurrencyFormat(object):
         :param iso_code: The iso_code of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        if iso_code is None:
-            raise ValueError("Invalid value for `iso_code`, must not be `None`")  # noqa: E501
+        
 
         self._iso_code = iso_code
 
@@ -111,8 +110,7 @@ class CurrencyFormat(object):
         :param example_format: The example_format of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        if example_format is None:
-            raise ValueError("Invalid value for `example_format`, must not be `None`")  # noqa: E501
+        
 
         self._example_format = example_format
 
@@ -134,8 +132,7 @@ class CurrencyFormat(object):
         :param decimal_digits: The decimal_digits of this CurrencyFormat.  # noqa: E501
         :type: int
         """
-        if decimal_digits is None:
-            raise ValueError("Invalid value for `decimal_digits`, must not be `None`")  # noqa: E501
+        
 
         self._decimal_digits = decimal_digits
 
@@ -157,8 +154,7 @@ class CurrencyFormat(object):
         :param decimal_separator: The decimal_separator of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        if decimal_separator is None:
-            raise ValueError("Invalid value for `decimal_separator`, must not be `None`")  # noqa: E501
+        
 
         self._decimal_separator = decimal_separator
 
@@ -180,8 +176,7 @@ class CurrencyFormat(object):
         :param symbol_first: The symbol_first of this CurrencyFormat.  # noqa: E501
         :type: bool
         """
-        if symbol_first is None:
-            raise ValueError("Invalid value for `symbol_first`, must not be `None`")  # noqa: E501
+        
 
         self._symbol_first = symbol_first
 
@@ -203,8 +198,7 @@ class CurrencyFormat(object):
         :param group_separator: The group_separator of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        if group_separator is None:
-            raise ValueError("Invalid value for `group_separator`, must not be `None`")  # noqa: E501
+        
 
         self._group_separator = group_separator
 
@@ -226,8 +220,7 @@ class CurrencyFormat(object):
         :param currency_symbol: The currency_symbol of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        if currency_symbol is None:
-            raise ValueError("Invalid value for `currency_symbol`, must not be `None`")  # noqa: E501
+        
 
         self._currency_symbol = currency_symbol
 
@@ -249,8 +242,7 @@ class CurrencyFormat(object):
         :param display_symbol: The display_symbol of this CurrencyFormat.  # noqa: E501
         :type: bool
         """
-        if display_symbol is None:
-            raise ValueError("Invalid value for `display_symbol`, must not be `None`")  # noqa: E501
+        
 
         self._display_symbol = display_symbol
 
