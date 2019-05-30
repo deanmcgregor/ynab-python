@@ -61,7 +61,6 @@ class SaveMonthCategoryWrapper(object):
         :param category: The category of this SaveMonthCategoryWrapper.  # noqa: E501
         :type: SaveMonthCategory
         """
-        
 
         self._category = category
 

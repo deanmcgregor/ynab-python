@@ -61,7 +61,6 @@ class ErrorResponse(object):
         :param error: The error of this ErrorResponse.  # noqa: E501
         :type: ErrorDetail
         """
-        
 
         self._error = error
 

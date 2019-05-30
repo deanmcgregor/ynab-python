@@ -65,7 +65,6 @@ class CategoryGroupsWrapper(object):
         :param category_groups: The category_groups of this CategoryGroupsWrapper.  # noqa: E501
         :type: list[CategoryGroupWithCategories]
         """
-        
 
         self._category_groups = category_groups
 
@@ -89,7 +88,6 @@ class CategoryGroupsWrapper(object):
         :param server_knowledge: The server_knowledge of this CategoryGroupsWrapper.  # noqa: E501
         :type: int
         """
-        
 
         self._server_knowledge = server_knowledge
 

@@ -61,7 +61,6 @@ class HybridTransactionsWrapper(object):
         :param transactions: The transactions of this HybridTransactionsWrapper.  # noqa: E501
         :type: list[HybridTransaction]
         """
-        
 
         self._transactions = transactions
 

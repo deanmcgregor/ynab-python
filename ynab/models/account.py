@@ -100,7 +100,6 @@ class Account(object):
         :param id: The id of this Account.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -122,7 +121,6 @@ class Account(object):
         :param name: The name of this Account.  # noqa: E501
         :type: str
         """
-        
 
         self._name = name
 
@@ -146,7 +144,6 @@ class Account(object):
         :param type: The type of this Account.  # noqa: E501
         :type: str
         """
-        
         allowed_values = ["checking", "savings", "cash", "creditCard", "lineOfCredit", "otherAsset", "otherLiability", "payPal", "merchantAccount", "investmentAccount", "mortgage"]  # noqa: E501
         if type not in allowed_values:
             raise ValueError(
@@ -176,7 +173,6 @@ class Account(object):
         :param on_budget: The on_budget of this Account.  # noqa: E501
         :type: bool
         """
-        
 
         self._on_budget = on_budget
 
@@ -200,7 +196,6 @@ class Account(object):
         :param closed: The closed of this Account.  # noqa: E501
         :type: bool
         """
-        
 
         self._closed = closed
 
@@ -222,7 +217,6 @@ class Account(object):
         :param note: The note of this Account.  # noqa: E501
         :type: str
         """
-        
 
         self._note = note
 
@@ -246,7 +240,6 @@ class Account(object):
         :param balance: The balance of this Account.  # noqa: E501
         :type: int
         """
-        
 
         self._balance = balance
 
@@ -270,7 +263,6 @@ class Account(object):
         :param cleared_balance: The cleared_balance of this Account.  # noqa: E501
         :type: int
         """
-        
 
         self._cleared_balance = cleared_balance
 
@@ -294,7 +286,6 @@ class Account(object):
         :param uncleared_balance: The uncleared_balance of this Account.  # noqa: E501
         :type: int
         """
-        
 
         self._uncleared_balance = uncleared_balance
 
@@ -318,7 +309,6 @@ class Account(object):
         :param transfer_payee_id: The transfer_payee_id of this Account.  # noqa: E501
         :type: str
         """
-        
 
         self._transfer_payee_id = transfer_payee_id
 
@@ -342,7 +332,6 @@ class Account(object):
         :param deleted: The deleted of this Account.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

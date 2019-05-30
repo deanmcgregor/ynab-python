@@ -104,7 +104,6 @@ class ScheduledTransactionSummary(object):
         :param id: The id of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -128,7 +127,6 @@ class ScheduledTransactionSummary(object):
         :param date_first: The date_first of this ScheduledTransactionSummary.  # noqa: E501
         :type: date
         """
-        
 
         self._date_first = date_first
 
@@ -152,7 +150,6 @@ class ScheduledTransactionSummary(object):
         :param date_next: The date_next of this ScheduledTransactionSummary.  # noqa: E501
         :type: date
         """
-        
 
         self._date_next = date_next
 
@@ -174,7 +171,6 @@ class ScheduledTransactionSummary(object):
         :param frequency: The frequency of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
-        
         allowed_values = ["never", "daily", "weekly", "everyOtherWeek", "twiceAMonth", "every4Weeks", "monthly", "everyOtherMonth", "every3Months", "every4Months", "twiceAYear", "yearly", "everyOtherYear"]  # noqa: E501
         if frequency not in allowed_values:
             raise ValueError(
@@ -204,7 +200,6 @@ class ScheduledTransactionSummary(object):
         :param amount: The amount of this ScheduledTransactionSummary.  # noqa: E501
         :type: int
         """
-        
 
         self._amount = amount
 
@@ -226,7 +221,6 @@ class ScheduledTransactionSummary(object):
         :param memo: The memo of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._memo = memo
 
@@ -250,7 +244,6 @@ class ScheduledTransactionSummary(object):
         :param flag_color: The flag_color of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
-        
         allowed_values = ["red", "orange", "yellow", "green", "blue", "purple"]  # noqa: E501
         if flag_color not in allowed_values:
             raise ValueError(
@@ -278,7 +271,6 @@ class ScheduledTransactionSummary(object):
         :param account_id: The account_id of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._account_id = account_id
 
@@ -300,7 +292,6 @@ class ScheduledTransactionSummary(object):
         :param payee_id: The payee_id of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._payee_id = payee_id
 
@@ -322,7 +313,6 @@ class ScheduledTransactionSummary(object):
         :param category_id: The category_id of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._category_id = category_id
 
@@ -346,7 +336,6 @@ class ScheduledTransactionSummary(object):
         :param transfer_account_id: The transfer_account_id of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._transfer_account_id = transfer_account_id
 
@@ -370,7 +359,6 @@ class ScheduledTransactionSummary(object):
         :param deleted: The deleted of this ScheduledTransactionSummary.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

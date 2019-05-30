@@ -88,7 +88,6 @@ class CurrencyFormat(object):
         :param iso_code: The iso_code of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        
 
         self._iso_code = iso_code
 
@@ -110,7 +109,6 @@ class CurrencyFormat(object):
         :param example_format: The example_format of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        
 
         self._example_format = example_format
 
@@ -132,7 +130,6 @@ class CurrencyFormat(object):
         :param decimal_digits: The decimal_digits of this CurrencyFormat.  # noqa: E501
         :type: int
         """
-        
 
         self._decimal_digits = decimal_digits
 
@@ -154,7 +151,6 @@ class CurrencyFormat(object):
         :param decimal_separator: The decimal_separator of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        
 
         self._decimal_separator = decimal_separator
 
@@ -176,7 +172,6 @@ class CurrencyFormat(object):
         :param symbol_first: The symbol_first of this CurrencyFormat.  # noqa: E501
         :type: bool
         """
-        
 
         self._symbol_first = symbol_first
 
@@ -198,7 +193,6 @@ class CurrencyFormat(object):
         :param group_separator: The group_separator of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        
 
         self._group_separator = group_separator
 
@@ -220,7 +214,6 @@ class CurrencyFormat(object):
         :param currency_symbol: The currency_symbol of this CurrencyFormat.  # noqa: E501
         :type: str
         """
-        
 
         self._currency_symbol = currency_symbol
 
@@ -242,7 +235,6 @@ class CurrencyFormat(object):
         :param display_symbol: The display_symbol of this CurrencyFormat.  # noqa: E501
         :type: bool
         """
-        
 
         self._display_symbol = display_symbol
 

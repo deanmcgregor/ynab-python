@@ -65,7 +65,6 @@ class TransactionsWrapper(object):
         :param transactions: The transactions of this TransactionsWrapper.  # noqa: E501
         :type: list[TransactionDetail]
         """
-        
 
         self._transactions = transactions
 
@@ -89,7 +88,6 @@ class TransactionsWrapper(object):
         :param server_knowledge: The server_knowledge of this TransactionsWrapper.  # noqa: E501
         :type: int
         """
-        
 
         self._server_knowledge = server_knowledge
 

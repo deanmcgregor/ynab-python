@@ -61,7 +61,6 @@ class BudgetSettingsResponse(object):
         :param data: The data of this BudgetSettingsResponse.  # noqa: E501
         :type: BudgetSettingsWrapper
         """
-        
 
         self._data = data
 

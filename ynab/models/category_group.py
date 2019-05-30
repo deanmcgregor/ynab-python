@@ -72,7 +72,6 @@ class CategoryGroup(object):
         :param id: The id of this CategoryGroup.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -94,7 +93,6 @@ class CategoryGroup(object):
         :param name: The name of this CategoryGroup.  # noqa: E501
         :type: str
         """
-        
 
         self._name = name
 
@@ -118,7 +116,6 @@ class CategoryGroup(object):
         :param hidden: The hidden of this CategoryGroup.  # noqa: E501
         :type: bool
         """
-        
 
         self._hidden = hidden
 
@@ -142,7 +139,6 @@ class CategoryGroup(object):
         :param deleted: The deleted of this CategoryGroup.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

@@ -61,7 +61,6 @@ class HybridTransactionsResponse(object):
         :param data: The data of this HybridTransactionsResponse.  # noqa: E501
         :type: HybridTransactionsWrapper
         """
-        
 
         self._data = data
 

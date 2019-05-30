@@ -61,7 +61,6 @@ class AccountWrapper(object):
         :param account: The account of this AccountWrapper.  # noqa: E501
         :type: Account
         """
-        
 
         self._account = account
 

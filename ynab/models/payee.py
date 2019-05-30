@@ -72,7 +72,6 @@ class Payee(object):
         :param id: The id of this Payee.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -94,7 +93,6 @@ class Payee(object):
         :param name: The name of this Payee.  # noqa: E501
         :type: str
         """
-        
 
         self._name = name
 
@@ -118,7 +116,6 @@ class Payee(object):
         :param transfer_account_id: The transfer_account_id of this Payee.  # noqa: E501
         :type: str
         """
-        
 
         self._transfer_account_id = transfer_account_id
 
@@ -142,7 +139,6 @@ class Payee(object):
         :param deleted: The deleted of this Payee.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

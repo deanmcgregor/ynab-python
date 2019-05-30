@@ -61,7 +61,6 @@ class PayeeLocationsWrapper(object):
         :param payee_locations: The payee_locations of this PayeeLocationsWrapper.  # noqa: E501
         :type: list[PayeeLocation]
         """
-        
 
         self._payee_locations = payee_locations
 

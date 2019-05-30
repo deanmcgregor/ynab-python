@@ -60,7 +60,6 @@ class User(object):
         :param id: The id of this User.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 

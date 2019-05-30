@@ -66,7 +66,6 @@ class BulkIds(object):
         :param transaction_ids: The transaction_ids of this BulkIds.  # noqa: E501
         :type: list[str]
         """
-        
 
         self._transaction_ids = transaction_ids
 
@@ -90,7 +89,6 @@ class BulkIds(object):
         :param duplicate_import_ids: The duplicate_import_ids of this BulkIds.  # noqa: E501
         :type: list[str]
         """
-        
 
         self._duplicate_import_ids = duplicate_import_ids
 

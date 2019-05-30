@@ -65,7 +65,6 @@ class BudgetDetailWrapper(object):
         :param budget: The budget of this BudgetDetailWrapper.  # noqa: E501
         :type: BudgetDetail
         """
-        
 
         self._budget = budget
 
@@ -89,7 +88,6 @@ class BudgetDetailWrapper(object):
         :param server_knowledge: The server_knowledge of this BudgetDetailWrapper.  # noqa: E501
         :type: int
         """
-        
 
         self._server_knowledge = server_knowledge
 

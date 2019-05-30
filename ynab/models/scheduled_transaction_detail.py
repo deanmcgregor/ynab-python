@@ -74,7 +74,6 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         :param account_name: The account_name of this ScheduledTransactionDetail.  # noqa: E501
         :type: str
         """
-        
 
         self._account_name = account_name
 
@@ -96,7 +95,6 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         :param payee_name: The payee_name of this ScheduledTransactionDetail.  # noqa: E501
         :type: str
         """
-        
 
         self._payee_name = payee_name
 
@@ -118,7 +116,6 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         :param category_name: The category_name of this ScheduledTransactionDetail.  # noqa: E501
         :type: str
         """
-        
 
         self._category_name = category_name
 
@@ -142,7 +139,6 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         :param subtransactions: The subtransactions of this ScheduledTransactionDetail.  # noqa: E501
         :type: list[ScheduledSubTransaction]
         """
-        
 
         self._subtransactions = subtransactions
 

@@ -79,7 +79,6 @@ class HybridTransaction(TransactionSummary):
         :param type: The type of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        
         allowed_values = ["transaction", "subtransaction"]  # noqa: E501
         if type not in allowed_values:
             raise ValueError(
@@ -109,7 +108,6 @@ class HybridTransaction(TransactionSummary):
         :param parent_transaction_id: The parent_transaction_id of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._parent_transaction_id = parent_transaction_id
 
@@ -131,7 +129,6 @@ class HybridTransaction(TransactionSummary):
         :param account_name: The account_name of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._account_name = account_name
 
@@ -153,7 +150,6 @@ class HybridTransaction(TransactionSummary):
         :param payee_name: The payee_name of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._payee_name = payee_name
 
@@ -175,7 +171,6 @@ class HybridTransaction(TransactionSummary):
         :param category_name: The category_name of this HybridTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._category_name = category_name
 

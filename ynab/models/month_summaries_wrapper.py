@@ -65,7 +65,6 @@ class MonthSummariesWrapper(object):
         :param months: The months of this MonthSummariesWrapper.  # noqa: E501
         :type: list[MonthSummary]
         """
-        
 
         self._months = months
 
@@ -89,7 +88,6 @@ class MonthSummariesWrapper(object):
         :param server_knowledge: The server_knowledge of this MonthSummariesWrapper.  # noqa: E501
         :type: int
         """
-        
 
         self._server_knowledge = server_knowledge
 

@@ -61,7 +61,6 @@ class AccountsResponse(object):
         :param data: The data of this AccountsResponse.  # noqa: E501
         :type: AccountsWrapper
         """
-        
 
         self._data = data
 

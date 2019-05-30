@@ -91,7 +91,6 @@ class BudgetSummary(object):
         :param id: The id of this BudgetSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -113,7 +112,6 @@ class BudgetSummary(object):
         :param name: The name of this BudgetSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._name = name
 

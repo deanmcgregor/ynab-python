@@ -61,7 +61,6 @@ class UserWrapper(object):
         :param user: The user of this UserWrapper.  # noqa: E501
         :type: User
         """
-        
 
         self._user = user
 

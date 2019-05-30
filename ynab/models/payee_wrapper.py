@@ -61,7 +61,6 @@ class PayeeWrapper(object):
         :param payee: The payee of this PayeeWrapper.  # noqa: E501
         :type: Payee
         """
-        
 
         self._payee = payee
 

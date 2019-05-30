@@ -76,7 +76,6 @@ class PayeeLocation(object):
         :param id: The id of this PayeeLocation.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -98,7 +97,6 @@ class PayeeLocation(object):
         :param payee_id: The payee_id of this PayeeLocation.  # noqa: E501
         :type: str
         """
-        
 
         self._payee_id = payee_id
 
@@ -120,7 +118,6 @@ class PayeeLocation(object):
         :param latitude: The latitude of this PayeeLocation.  # noqa: E501
         :type: str
         """
-        
 
         self._latitude = latitude
 
@@ -142,7 +139,6 @@ class PayeeLocation(object):
         :param longitude: The longitude of this PayeeLocation.  # noqa: E501
         :type: str
         """
-        
 
         self._longitude = longitude
 
@@ -166,7 +162,6 @@ class PayeeLocation(object):
         :param deleted: The deleted of this PayeeLocation.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

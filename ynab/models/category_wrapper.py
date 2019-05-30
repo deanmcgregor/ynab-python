@@ -61,7 +61,6 @@ class CategoryWrapper(object):
         :param category: The category of this CategoryWrapper.  # noqa: E501
         :type: Category
         """
-        
 
         self._category = category
 

@@ -61,7 +61,6 @@ class UserResponse(object):
         :param data: The data of this UserResponse.  # noqa: E501
         :type: UserWrapper
         """
-        
 
         self._data = data
 

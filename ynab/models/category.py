@@ -117,7 +117,6 @@ class Category(object):
         :param id: The id of this Category.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -139,7 +138,6 @@ class Category(object):
         :param category_group_id: The category_group_id of this Category.  # noqa: E501
         :type: str
         """
-        
 
         self._category_group_id = category_group_id
 
@@ -161,7 +159,6 @@ class Category(object):
         :param name: The name of this Category.  # noqa: E501
         :type: str
         """
-        
 
         self._name = name
 
@@ -185,7 +182,6 @@ class Category(object):
         :param hidden: The hidden of this Category.  # noqa: E501
         :type: bool
         """
-        
 
         self._hidden = hidden
 
@@ -230,7 +226,6 @@ class Category(object):
         :param note: The note of this Category.  # noqa: E501
         :type: str
         """
-        
 
         self._note = note
 
@@ -254,7 +249,6 @@ class Category(object):
         :param budgeted: The budgeted of this Category.  # noqa: E501
         :type: int
         """
-        
 
         self._budgeted = budgeted
 
@@ -278,7 +272,6 @@ class Category(object):
         :param activity: The activity of this Category.  # noqa: E501
         :type: int
         """
-        
 
         self._activity = activity
 
@@ -302,7 +295,6 @@ class Category(object):
         :param balance: The balance of this Category.  # noqa: E501
         :type: int
         """
-        
 
         self._balance = balance
 
@@ -326,7 +318,6 @@ class Category(object):
         :param goal_type: The goal_type of this Category.  # noqa: E501
         :type: str
         """
-        
         allowed_values = ["TB", "TBD", "MF"]  # noqa: E501
         if goal_type not in allowed_values:
             raise ValueError(
@@ -356,7 +347,6 @@ class Category(object):
         :param goal_creation_month: The goal_creation_month of this Category.  # noqa: E501
         :type: date
         """
-        
 
         self._goal_creation_month = goal_creation_month
 
@@ -380,7 +370,6 @@ class Category(object):
         :param goal_target: The goal_target of this Category.  # noqa: E501
         :type: int
         """
-        
 
         self._goal_target = goal_target
 
@@ -404,7 +393,6 @@ class Category(object):
         :param goal_target_month: The goal_target_month of this Category.  # noqa: E501
         :type: date
         """
-        
 
         self._goal_target_month = goal_target_month
 
@@ -428,7 +416,6 @@ class Category(object):
         :param goal_percentage_complete: The goal_percentage_complete of this Category.  # noqa: E501
         :type: int
         """
-        
 
         self._goal_percentage_complete = goal_percentage_complete
 
@@ -452,7 +439,6 @@ class Category(object):
         :param deleted: The deleted of this Category.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

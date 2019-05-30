@@ -61,7 +61,6 @@ class MonthSummariesResponse(object):
         :param data: The data of this MonthSummariesResponse.  # noqa: E501
         :type: MonthSummariesWrapper
         """
-        
 
         self._data = data
 

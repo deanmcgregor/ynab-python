@@ -61,7 +61,6 @@ class TransactionsResponse(object):
         :param data: The data of this TransactionsResponse.  # noqa: E501
         :type: TransactionsWrapper
         """
-        
 
         self._data = data
 

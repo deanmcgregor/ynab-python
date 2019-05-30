@@ -65,7 +65,6 @@ class AccountsWrapper(object):
         :param accounts: The accounts of this AccountsWrapper.  # noqa: E501
         :type: list[Account]
         """
-        
 
         self._accounts = accounts
 
@@ -89,7 +88,6 @@ class AccountsWrapper(object):
         :param server_knowledge: The server_knowledge of this AccountsWrapper.  # noqa: E501
         :type: int
         """
-        
 
         self._server_knowledge = server_knowledge
 

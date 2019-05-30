@@ -61,7 +61,6 @@ class BudgetSummaryResponse(object):
         :param data: The data of this BudgetSummaryResponse.  # noqa: E501
         :type: BudgetSummaryWrapper
         """
-        
 
         self._data = data
 

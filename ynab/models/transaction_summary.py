@@ -116,7 +116,6 @@ class TransactionSummary(object):
         :param id: The id of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -138,7 +137,6 @@ class TransactionSummary(object):
         :param _date: The _date of this TransactionSummary.  # noqa: E501
         :type: date
         """
-        
 
         self.__date = _date
 
@@ -162,7 +160,6 @@ class TransactionSummary(object):
         :param amount: The amount of this TransactionSummary.  # noqa: E501
         :type: int
         """
-        
 
         self._amount = amount
 
@@ -184,7 +181,6 @@ class TransactionSummary(object):
         :param memo: The memo of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._memo = memo
 
@@ -208,7 +204,6 @@ class TransactionSummary(object):
         :param cleared: The cleared of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
         allowed_values = ["cleared", "uncleared", "reconciled"]  # noqa: E501
         if cleared not in allowed_values:
             raise ValueError(
@@ -238,7 +233,6 @@ class TransactionSummary(object):
         :param approved: The approved of this TransactionSummary.  # noqa: E501
         :type: bool
         """
-        
 
         self._approved = approved
 
@@ -262,7 +256,6 @@ class TransactionSummary(object):
         :param flag_color: The flag_color of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
         allowed_values = ["red", "orange", "yellow", "green", "blue", "purple"]  # noqa: E501
         if flag_color not in allowed_values:
             raise ValueError(
@@ -290,7 +283,6 @@ class TransactionSummary(object):
         :param account_id: The account_id of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._account_id = account_id
 
@@ -312,7 +304,6 @@ class TransactionSummary(object):
         :param payee_id: The payee_id of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._payee_id = payee_id
 
@@ -334,7 +325,6 @@ class TransactionSummary(object):
         :param category_id: The category_id of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._category_id = category_id
 
@@ -358,7 +348,6 @@ class TransactionSummary(object):
         :param transfer_account_id: The transfer_account_id of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._transfer_account_id = transfer_account_id
 
@@ -382,7 +371,6 @@ class TransactionSummary(object):
         :param transfer_transaction_id: The transfer_transaction_id of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._transfer_transaction_id = transfer_transaction_id
 
@@ -406,7 +394,6 @@ class TransactionSummary(object):
         :param matched_transaction_id: The matched_transaction_id of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._matched_transaction_id = matched_transaction_id
 
@@ -430,7 +417,6 @@ class TransactionSummary(object):
         :param import_id: The import_id of this TransactionSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._import_id = import_id
 
@@ -454,7 +440,6 @@ class TransactionSummary(object):
         :param deleted: The deleted of this TransactionSummary.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

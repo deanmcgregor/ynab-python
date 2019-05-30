@@ -61,7 +61,6 @@ class CategoryResponse(object):
         :param data: The data of this CategoryResponse.  # noqa: E501
         :type: CategoryWrapper
         """
-        
 
         self._data = data
 

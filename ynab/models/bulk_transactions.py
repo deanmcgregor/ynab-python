@@ -61,7 +61,6 @@ class BulkTransactions(object):
         :param transactions: The transactions of this BulkTransactions.  # noqa: E501
         :type: list[SaveTransaction]
         """
-        
 
         self._transactions = transactions
 

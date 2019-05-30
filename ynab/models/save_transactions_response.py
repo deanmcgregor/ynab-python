@@ -60,7 +60,6 @@ class SaveTransactionsResponse(object):
         :param data: The data of this SaveTransactionsResponse.  # noqa: E501
         :type: object
         """
-        
 
         self._data = data
 

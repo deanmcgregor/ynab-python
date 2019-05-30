@@ -61,7 +61,6 @@ class BulkResponse(object):
         :param data: The data of this BulkResponse.  # noqa: E501
         :type: BulkIdWrapper
         """
-        
 
         self._data = data
 

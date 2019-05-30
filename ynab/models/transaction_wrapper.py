@@ -61,7 +61,6 @@ class TransactionWrapper(object):
         :param transaction: The transaction of this TransactionWrapper.  # noqa: E501
         :type: TransactionDetail
         """
-        
 
         self._transaction = transaction
 

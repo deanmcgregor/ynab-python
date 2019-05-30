@@ -88,7 +88,6 @@ class MonthSummary(object):
         :param month: The month of this MonthSummary.  # noqa: E501
         :type: date
         """
-        
 
         self._month = month
 
@@ -110,7 +109,6 @@ class MonthSummary(object):
         :param note: The note of this MonthSummary.  # noqa: E501
         :type: str
         """
-        
 
         self._note = note
 
@@ -134,7 +132,6 @@ class MonthSummary(object):
         :param income: The income of this MonthSummary.  # noqa: E501
         :type: int
         """
-        
 
         self._income = income
 
@@ -158,7 +155,6 @@ class MonthSummary(object):
         :param budgeted: The budgeted of this MonthSummary.  # noqa: E501
         :type: int
         """
-        
 
         self._budgeted = budgeted
 
@@ -182,7 +178,6 @@ class MonthSummary(object):
         :param activity: The activity of this MonthSummary.  # noqa: E501
         :type: int
         """
-        
 
         self._activity = activity
 
@@ -206,7 +201,6 @@ class MonthSummary(object):
         :param to_be_budgeted: The to_be_budgeted of this MonthSummary.  # noqa: E501
         :type: int
         """
-        
 
         self._to_be_budgeted = to_be_budgeted
 
@@ -230,7 +224,6 @@ class MonthSummary(object):
         :param age_of_money: The age_of_money of this MonthSummary.  # noqa: E501
         :type: int
         """
-        
 
         self._age_of_money = age_of_money
 
@@ -254,7 +247,6 @@ class MonthSummary(object):
         :param deleted: The deleted of this MonthSummary.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

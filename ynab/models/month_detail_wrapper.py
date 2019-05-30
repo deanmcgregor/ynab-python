@@ -61,7 +61,6 @@ class MonthDetailWrapper(object):
         :param month: The month of this MonthDetailWrapper.  # noqa: E501
         :type: MonthDetail
         """
-        
 
         self._month = month
 

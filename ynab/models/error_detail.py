@@ -68,7 +68,6 @@ class ErrorDetail(object):
         :param id: The id of this ErrorDetail.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -90,7 +89,6 @@ class ErrorDetail(object):
         :param name: The name of this ErrorDetail.  # noqa: E501
         :type: str
         """
-        
 
         self._name = name
 
@@ -112,7 +110,6 @@ class ErrorDetail(object):
         :param detail: The detail of this ErrorDetail.  # noqa: E501
         :type: str
         """
-        
 
         self._detail = detail
 

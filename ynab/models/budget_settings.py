@@ -66,7 +66,6 @@ class BudgetSettings(object):
         :param date_format: The date_format of this BudgetSettings.  # noqa: E501
         :type: DateFormat
         """
-        
 
         self._date_format = date_format
 
@@ -88,7 +87,6 @@ class BudgetSettings(object):
         :param currency_format: The currency_format of this BudgetSettings.  # noqa: E501
         :type: CurrencyFormat
         """
-        
 
         self._currency_format = currency_format
 

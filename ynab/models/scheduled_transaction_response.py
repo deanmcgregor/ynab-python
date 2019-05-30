@@ -61,7 +61,6 @@ class ScheduledTransactionResponse(object):
         :param data: The data of this ScheduledTransactionResponse.  # noqa: E501
         :type: ScheduledTransactionWrapper
         """
-        
 
         self._data = data
 

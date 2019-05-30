@@ -61,7 +61,6 @@ class MonthDetailResponse(object):
         :param data: The data of this MonthDetailResponse.  # noqa: E501
         :type: MonthDetailWrapper
         """
-        
 
         self._data = data
 

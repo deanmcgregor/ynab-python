@@ -64,7 +64,6 @@ class MonthDetail(MonthSummary):
         :param categories: The categories of this MonthDetail.  # noqa: E501
         :type: list[Category]
         """
-        
 
         self._categories = categories
 

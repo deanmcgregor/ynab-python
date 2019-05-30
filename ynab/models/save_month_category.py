@@ -62,7 +62,6 @@ class SaveMonthCategory(object):
         :param budgeted: The budgeted of this SaveMonthCategory.  # noqa: E501
         :type: int
         """
-        
 
         self._budgeted = budgeted
 

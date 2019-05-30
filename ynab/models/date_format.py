@@ -60,7 +60,6 @@ class DateFormat(object):
         :param format: The format of this DateFormat.  # noqa: E501
         :type: str
         """
-        
 
         self._format = format
 

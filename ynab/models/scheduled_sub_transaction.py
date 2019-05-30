@@ -88,7 +88,6 @@ class ScheduledSubTransaction(object):
         :param id: The id of this ScheduledSubTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._id = id
 
@@ -110,7 +109,6 @@ class ScheduledSubTransaction(object):
         :param scheduled_transaction_id: The scheduled_transaction_id of this ScheduledSubTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._scheduled_transaction_id = scheduled_transaction_id
 
@@ -134,7 +132,6 @@ class ScheduledSubTransaction(object):
         :param amount: The amount of this ScheduledSubTransaction.  # noqa: E501
         :type: int
         """
-        
 
         self._amount = amount
 
@@ -156,7 +153,6 @@ class ScheduledSubTransaction(object):
         :param memo: The memo of this ScheduledSubTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._memo = memo
 
@@ -178,7 +174,6 @@ class ScheduledSubTransaction(object):
         :param payee_id: The payee_id of this ScheduledSubTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._payee_id = payee_id
 
@@ -200,7 +195,6 @@ class ScheduledSubTransaction(object):
         :param category_id: The category_id of this ScheduledSubTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._category_id = category_id
 
@@ -224,7 +218,6 @@ class ScheduledSubTransaction(object):
         :param transfer_account_id: The transfer_account_id of this ScheduledSubTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._transfer_account_id = transfer_account_id
 
@@ -248,7 +241,6 @@ class ScheduledSubTransaction(object):
         :param deleted: The deleted of this ScheduledSubTransaction.  # noqa: E501
         :type: bool
         """
-        
 
         self._deleted = deleted
 

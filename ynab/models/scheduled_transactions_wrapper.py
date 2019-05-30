@@ -61,7 +61,6 @@ class ScheduledTransactionsWrapper(object):
         :param scheduled_transactions: The scheduled_transactions of this ScheduledTransactionsWrapper.  # noqa: E501
         :type: list[ScheduledTransactionDetail]
         """
-        
 
         self._scheduled_transactions = scheduled_transactions
 

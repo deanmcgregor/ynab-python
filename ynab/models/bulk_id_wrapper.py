@@ -61,7 +61,6 @@ class BulkIdWrapper(object):
         :param bulk: The bulk of this BulkIdWrapper.  # noqa: E501
         :type: BulkIds
         """
-        
 
         self._bulk = bulk
 

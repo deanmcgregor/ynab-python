@@ -61,7 +61,6 @@ class PayeesResponse(object):
         :param data: The data of this PayeesResponse.  # noqa: E501
         :type: PayeesWrapper
         """
-        
 
         self._data = data
 

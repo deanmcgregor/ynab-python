@@ -65,7 +65,6 @@ class PayeesWrapper(object):
         :param payees: The payees of this PayeesWrapper.  # noqa: E501
         :type: list[Payee]
         """
-        
 
         self._payees = payees
 
@@ -89,7 +88,6 @@ class PayeesWrapper(object):
         :param server_knowledge: The server_knowledge of this PayeesWrapper.  # noqa: E501
         :type: int
         """
-        
 
         self._server_knowledge = server_knowledge
 

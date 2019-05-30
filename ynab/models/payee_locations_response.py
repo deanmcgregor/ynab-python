@@ -61,7 +61,6 @@ class PayeeLocationsResponse(object):
         :param data: The data of this PayeeLocationsResponse.  # noqa: E501
         :type: PayeeLocationsWrapper
         """
-        
 
         self._data = data
 

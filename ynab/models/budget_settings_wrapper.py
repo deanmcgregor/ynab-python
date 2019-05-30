@@ -61,7 +61,6 @@ class BudgetSettingsWrapper(object):
         :param settings: The settings of this BudgetSettingsWrapper.  # noqa: E501
         :type: BudgetSettings
         """
-        
 
         self._settings = settings
 

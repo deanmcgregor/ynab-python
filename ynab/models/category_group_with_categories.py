@@ -64,7 +64,6 @@ class CategoryGroupWithCategories(CategoryGroup):
         :param categories: The categories of this CategoryGroupWithCategories.  # noqa: E501
         :type: list[Category]
         """
-        
 
         self._categories = categories
 

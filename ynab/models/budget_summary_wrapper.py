@@ -61,7 +61,6 @@ class BudgetSummaryWrapper(object):
         :param budgets: The budgets of this BudgetSummaryWrapper.  # noqa: E501
         :type: list[BudgetSummary]
         """
-        
 
         self._budgets = budgets
 

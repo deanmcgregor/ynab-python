@@ -108,7 +108,6 @@ class SaveTransaction(object):
         :param account_id: The account_id of this SaveTransaction.  # noqa: E501
         :type: str
         """
-        
 
         self._account_id = account_id
 
@@ -130,7 +129,6 @@ class SaveTransaction(object):
         :param _date: The _date of this SaveTransaction.  # noqa: E501
         :type: date
         """
-        
 
         self.__date = _date
 
@@ -154,7 +152,6 @@ class SaveTransaction(object):
         :param amount: The amount of this SaveTransaction.  # noqa: E501
         :type: int
         """
-        
 
         self._amount = amount
 
