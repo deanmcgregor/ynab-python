@@ -2407,7 +2407,8 @@
         "flag_color": {
           "type": "string",
           "enum": ["red", "orange", "yellow", "green", "blue", "purple", null],
-          "description": "The transaction flag"
+          "description": "The transaction flag",
+          "nullable": true
         },
         "account_id": {
           "type": "string",
