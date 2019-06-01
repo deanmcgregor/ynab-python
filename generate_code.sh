@@ -4,7 +4,7 @@
 rm -rf test/* 
 
 # Generate the code
-swagger-codegen generate -i https://api.youneedabudget.com/papi/spec-v1-swagger.json -l python -o . --config swagger-codegen-python-config.json --git-user-id deanmcgregor --git-repo-id ynab-python
+swagger-codegen generate -i spec-v1-swagger.json -l python -o . --config swagger-codegen-python-config.json --git-user-id deanmcgregor --git-repo-id ynab-python
 
 # Fix the models module path
 git grep -lz test | xargs -0 sed -i '' 's/from models\./from ynab\.models\./g'
