@@ -6,13 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_user**](UserApi.md#get_user) | **GET** /user | User info
 
-
 # **get_user**
 > UserResponse get_user()
 
 User info
 
-Returns authenticated user information.
+Returns authenticated user information
 
 ### Example
 ```python

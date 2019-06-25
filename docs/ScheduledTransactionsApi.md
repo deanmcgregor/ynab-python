@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**get_scheduled_transaction_by_id**](ScheduledTransactionsApi.md#get_scheduled_transaction_by_id) | **GET** /budgets/{budget_id}/scheduled_transactions/{scheduled_transaction_id} | Single scheduled transaction
 [**get_scheduled_transactions**](ScheduledTransactionsApi.md#get_scheduled_transactions) | **GET** /budgets/{budget_id}/scheduled_transactions | List scheduled transactions
 
-
 # **get_scheduled_transaction_by_id**
 > ScheduledTransactionResponse get_scheduled_transaction_by_id(budget_id, scheduled_transaction_id)
 
@@ -31,8 +30,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = ynab.ScheduledTransactionsApi(ynab.ApiClient(configuration))
-budget_id = 'budget_id_example' # str | The ID of the Budget.
-scheduled_transaction_id = 'scheduled_transaction_id_example' # str | The ID of the Scheduled Transaction.
+budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
+scheduled_transaction_id = 'scheduled_transaction_id_example' # str | The id of the scheduled transaction
 
 try:
     # Single scheduled transaction
@@ -46,8 +45,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | [**str**](.md)| The ID of the Budget. | 
- **scheduled_transaction_id** | [**str**](.md)| The ID of the Scheduled Transaction. | 
+ **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **scheduled_transaction_id** | **str**| The id of the scheduled transaction | 
 
 ### Return type
 
@@ -87,7 +86,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = ynab.ScheduledTransactionsApi(ynab.ApiClient(configuration))
-budget_id = 'budget_id_example' # str | The ID of the Budget.
+budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
 
 try:
     # List scheduled transactions
@@ -101,7 +100,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | [**str**](.md)| The ID of the Budget. | 
+ **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
 
 ### Return type
 
