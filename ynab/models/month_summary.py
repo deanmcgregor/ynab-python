@@ -62,12 +62,14 @@ class MonthSummary(object):
         self._deleted = None
         self.discriminator = None
         self.month = month
-        self.note = note
+        if note is not None:
+            self.note = note
         self.income = income
         self.budgeted = budgeted
         self.activity = activity
         self.to_be_budgeted = to_be_budgeted
-        self.age_of_money = age_of_money
+        if age_of_money is not None:
+            self.age_of_money = age_of_money
         self.deleted = deleted
 
     @property
@@ -116,7 +118,7 @@ class MonthSummary(object):
     def income(self):
         """Gets the income of this MonthSummary.  # noqa: E501
 
-        The total amount in transactions categorized to 'Inflow: To be Budgeted' in the month  # noqa: E501
+        The total amount of transactions categorized to 'Inflow: Ready to Assign' in the month  # noqa: E501
 
         :return: The income of this MonthSummary.  # noqa: E501
         :rtype: int
@@ -127,7 +129,7 @@ class MonthSummary(object):
     def income(self, income):
         """Sets the income of this MonthSummary.
 
-        The total amount in transactions categorized to 'Inflow: To be Budgeted' in the month  # noqa: E501
+        The total amount of transactions categorized to 'Inflow: Ready to Assign' in the month  # noqa: E501
 
         :param income: The income of this MonthSummary.  # noqa: E501
         :type: int
@@ -162,7 +164,7 @@ class MonthSummary(object):
     def activity(self):
         """Gets the activity of this MonthSummary.  # noqa: E501
 
-        The total amount in transactions in the month, excluding those categorized to 'Inflow: To be Budgeted'  # noqa: E501
+        The total amount of transactions in the month, excluding those categorized to 'Inflow: Ready to Assign'  # noqa: E501
 
         :return: The activity of this MonthSummary.  # noqa: E501
         :rtype: int
@@ -173,7 +175,7 @@ class MonthSummary(object):
     def activity(self, activity):
         """Sets the activity of this MonthSummary.
 
-        The total amount in transactions in the month, excluding those categorized to 'Inflow: To be Budgeted'  # noqa: E501
+        The total amount of transactions in the month, excluding those categorized to 'Inflow: Ready to Assign'  # noqa: E501
 
         :param activity: The activity of this MonthSummary.  # noqa: E501
         :type: int
@@ -185,7 +187,7 @@ class MonthSummary(object):
     def to_be_budgeted(self):
         """Gets the to_be_budgeted of this MonthSummary.  # noqa: E501
 
-        The available amount for 'To be Budgeted'  # noqa: E501
+        The available amount for 'Ready to Assign'  # noqa: E501
 
         :return: The to_be_budgeted of this MonthSummary.  # noqa: E501
         :rtype: int
@@ -196,7 +198,7 @@ class MonthSummary(object):
     def to_be_budgeted(self, to_be_budgeted):
         """Sets the to_be_budgeted of this MonthSummary.
 
-        The available amount for 'To be Budgeted'  # noqa: E501
+        The available amount for 'Ready to Assign'  # noqa: E501
 
         :param to_be_budgeted: The to_be_budgeted of this MonthSummary.  # noqa: E501
         :type: int

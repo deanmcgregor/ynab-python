@@ -54,10 +54,13 @@ class HybridTransaction(TransactionSummary):
         self._category_name = None
         self.discriminator = None
         self.type = type
-        self.parent_transaction_id = parent_transaction_id
+        if parent_transaction_id is not None:
+            self.parent_transaction_id = parent_transaction_id
         self.account_name = account_name
-        self.payee_name = payee_name
-        self.category_name = category_name
+        if payee_name is not None:
+            self.payee_name = payee_name
+        if category_name is not None:
+            self.category_name = category_name
 
     @property
     def type(self):
@@ -92,7 +95,7 @@ class HybridTransaction(TransactionSummary):
     def parent_transaction_id(self):
         """Gets the parent_transaction_id of this HybridTransaction.  # noqa: E501
 
-        For subtransaction types, this is the id of the pararent transaction.  For transaction types, this id will be always be null.  # noqa: E501
+        For subtransaction types, this is the id of the parent transaction.  For transaction types, this id will be always be null.  # noqa: E501
 
         :return: The parent_transaction_id of this HybridTransaction.  # noqa: E501
         :rtype: str
@@ -103,7 +106,7 @@ class HybridTransaction(TransactionSummary):
     def parent_transaction_id(self, parent_transaction_id):
         """Sets the parent_transaction_id of this HybridTransaction.
 
-        For subtransaction types, this is the id of the pararent transaction.  For transaction types, this id will be always be null.  # noqa: E501
+        For subtransaction types, this is the id of the parent transaction.  For transaction types, this id will be always be null.  # noqa: E501
 
         :param parent_transaction_id: The parent_transaction_id of this HybridTransaction.  # noqa: E501
         :type: str

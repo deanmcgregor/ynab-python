@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from ynab.models.scheduled_transaction_wrapper import ScheduledTransactionWrapper  # noqa: F401,E501
 
 
 class ScheduledTransactionResponse(object):
@@ -30,7 +29,7 @@ class ScheduledTransactionResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data': 'ScheduledTransactionWrapper'
+        'data': 'object'
     }
 
     attribute_map = {
@@ -49,7 +48,7 @@ class ScheduledTransactionResponse(object):
 
 
         :return: The data of this ScheduledTransactionResponse.  # noqa: E501
-        :rtype: ScheduledTransactionWrapper
+        :rtype: object
         """
         return self._data
 
@@ -59,7 +58,7 @@ class ScheduledTransactionResponse(object):
 
 
         :param data: The data of this ScheduledTransactionResponse.  # noqa: E501
-        :type: ScheduledTransactionWrapper
+        :type: object
         """
 
         self._data = data

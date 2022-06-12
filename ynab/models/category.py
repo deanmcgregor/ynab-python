@@ -43,6 +43,10 @@ class Category(object):
         'goal_target': 'int',
         'goal_target_month': 'date',
         'goal_percentage_complete': 'int',
+        'goal_months_to_budget': 'int',
+        'goal_under_funded': 'int',
+        'goal_overall_funded': 'int',
+        'goal_overall_left': 'int',
         'deleted': 'bool'
     }
 
@@ -61,10 +65,14 @@ class Category(object):
         'goal_target': 'goal_target',
         'goal_target_month': 'goal_target_month',
         'goal_percentage_complete': 'goal_percentage_complete',
+        'goal_months_to_budget': 'goal_months_to_budget',
+        'goal_under_funded': 'goal_under_funded',
+        'goal_overall_funded': 'goal_overall_funded',
+        'goal_overall_left': 'goal_overall_left',
         'deleted': 'deleted'
     }
 
-    def __init__(self, id=None, category_group_id=None, name=None, hidden=None, original_category_group_id=None, note=None, budgeted=None, activity=None, balance=None, goal_type=None, goal_creation_month=None, goal_target=None, goal_target_month=None, goal_percentage_complete=None, deleted=None):  # noqa: E501
+    def __init__(self, id=None, category_group_id=None, name=None, hidden=None, original_category_group_id=None, note=None, budgeted=None, activity=None, balance=None, goal_type=None, goal_creation_month=None, goal_target=None, goal_target_month=None, goal_percentage_complete=None, goal_months_to_budget=None, goal_under_funded=None, goal_overall_funded=None, goal_overall_left=None, deleted=None):  # noqa: E501
         """Category - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._category_group_id = None
@@ -80,6 +88,10 @@ class Category(object):
         self._goal_target = None
         self._goal_target_month = None
         self._goal_percentage_complete = None
+        self._goal_months_to_budget = None
+        self._goal_under_funded = None
+        self._goal_overall_funded = None
+        self._goal_overall_left = None
         self._deleted = None
         self.discriminator = None
         self.id = id
@@ -88,15 +100,29 @@ class Category(object):
         self.hidden = hidden
         if original_category_group_id is not None:
             self.original_category_group_id = original_category_group_id
-        self.note = note
+        if note is not None:
+            self.note = note
         self.budgeted = budgeted
         self.activity = activity
         self.balance = balance
-        self.goal_type = goal_type
-        self.goal_creation_month = goal_creation_month
-        self.goal_target = goal_target
-        self.goal_target_month = goal_target_month
-        self.goal_percentage_complete = goal_percentage_complete
+        if goal_type is not None:
+            self.goal_type = goal_type
+        if goal_creation_month is not None:
+            self.goal_creation_month = goal_creation_month
+        if goal_target is not None:
+            self.goal_target = goal_target
+        if goal_target_month is not None:
+            self.goal_target_month = goal_target_month
+        if goal_percentage_complete is not None:
+            self.goal_percentage_complete = goal_percentage_complete
+        if goal_months_to_budget is not None:
+            self.goal_months_to_budget = goal_months_to_budget
+        if goal_under_funded is not None:
+            self.goal_under_funded = goal_under_funded
+        if goal_overall_funded is not None:
+            self.goal_overall_funded = goal_overall_funded
+        if goal_overall_left is not None:
+            self.goal_overall_left = goal_overall_left
         self.deleted = deleted
 
     @property
@@ -302,7 +328,7 @@ class Category(object):
     def goal_type(self):
         """Gets the goal_type of this Category.  # noqa: E501
 
-        The type of goal, if the cagegory has a goal (TB=Target Category Balance, TBD=Target Category Balance by Date, MF=Monthly Funding)  # noqa: E501
+        The type of goal, if the category has a goal (TB='Target Category Balance', TBD='Target Category Balance by Date', MF='Monthly Funding', NEED='Plan Your Spending')  # noqa: E501
 
         :return: The goal_type of this Category.  # noqa: E501
         :rtype: str
@@ -313,12 +339,12 @@ class Category(object):
     def goal_type(self, goal_type):
         """Sets the goal_type of this Category.
 
-        The type of goal, if the cagegory has a goal (TB=Target Category Balance, TBD=Target Category Balance by Date, MF=Monthly Funding)  # noqa: E501
+        The type of goal, if the category has a goal (TB='Target Category Balance', TBD='Target Category Balance by Date', MF='Monthly Funding', NEED='Plan Your Spending')  # noqa: E501
 
         :param goal_type: The goal_type of this Category.  # noqa: E501
         :type: str
         """
-        allowed_values = ["TB", "TBD", "MF"]  # noqa: E501
+        allowed_values = ["TB", "TBD", "MF", "NEED"]  # noqa: E501
         if goal_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `goal_type` ({0}), must be one of {1}"  # noqa: E501
@@ -377,7 +403,7 @@ class Category(object):
     def goal_target_month(self):
         """Gets the goal_target_month of this Category.  # noqa: E501
 
-        If the goal type is 'TBD' (Target Category Balance by Date), this is the target month for the goal to be completed  # noqa: E501
+        The original target month for the goal to be completed.  Only some goal types specify this date.  # noqa: E501
 
         :return: The goal_target_month of this Category.  # noqa: E501
         :rtype: date
@@ -388,7 +414,7 @@ class Category(object):
     def goal_target_month(self, goal_target_month):
         """Sets the goal_target_month of this Category.
 
-        If the goal type is 'TBD' (Target Category Balance by Date), this is the target month for the goal to be completed  # noqa: E501
+        The original target month for the goal to be completed.  Only some goal types specify this date.  # noqa: E501
 
         :param goal_target_month: The goal_target_month of this Category.  # noqa: E501
         :type: date
@@ -418,6 +444,98 @@ class Category(object):
         """
 
         self._goal_percentage_complete = goal_percentage_complete
+
+    @property
+    def goal_months_to_budget(self):
+        """Gets the goal_months_to_budget of this Category.  # noqa: E501
+
+        The number of months, including the current month, left in the current goal period.  # noqa: E501
+
+        :return: The goal_months_to_budget of this Category.  # noqa: E501
+        :rtype: int
+        """
+        return self._goal_months_to_budget
+
+    @goal_months_to_budget.setter
+    def goal_months_to_budget(self, goal_months_to_budget):
+        """Sets the goal_months_to_budget of this Category.
+
+        The number of months, including the current month, left in the current goal period.  # noqa: E501
+
+        :param goal_months_to_budget: The goal_months_to_budget of this Category.  # noqa: E501
+        :type: int
+        """
+
+        self._goal_months_to_budget = goal_months_to_budget
+
+    @property
+    def goal_under_funded(self):
+        """Gets the goal_under_funded of this Category.  # noqa: E501
+
+        The amount of funding still needed in the current month to stay on track towards completing the goal within the current goal period.  This amount will generally correspond to the 'Underfunded' amount in the web and mobile clients except when viewing a category with a Needed for Spending Goal in a future month.  The web and mobile clients will ignore any funding from a prior goal period when viewing category with a Needed for Spending Goal in a future month.  # noqa: E501
+
+        :return: The goal_under_funded of this Category.  # noqa: E501
+        :rtype: int
+        """
+        return self._goal_under_funded
+
+    @goal_under_funded.setter
+    def goal_under_funded(self, goal_under_funded):
+        """Sets the goal_under_funded of this Category.
+
+        The amount of funding still needed in the current month to stay on track towards completing the goal within the current goal period.  This amount will generally correspond to the 'Underfunded' amount in the web and mobile clients except when viewing a category with a Needed for Spending Goal in a future month.  The web and mobile clients will ignore any funding from a prior goal period when viewing category with a Needed for Spending Goal in a future month.  # noqa: E501
+
+        :param goal_under_funded: The goal_under_funded of this Category.  # noqa: E501
+        :type: int
+        """
+
+        self._goal_under_funded = goal_under_funded
+
+    @property
+    def goal_overall_funded(self):
+        """Gets the goal_overall_funded of this Category.  # noqa: E501
+
+        The total amount funded towards the goal within the current goal period.  # noqa: E501
+
+        :return: The goal_overall_funded of this Category.  # noqa: E501
+        :rtype: int
+        """
+        return self._goal_overall_funded
+
+    @goal_overall_funded.setter
+    def goal_overall_funded(self, goal_overall_funded):
+        """Sets the goal_overall_funded of this Category.
+
+        The total amount funded towards the goal within the current goal period.  # noqa: E501
+
+        :param goal_overall_funded: The goal_overall_funded of this Category.  # noqa: E501
+        :type: int
+        """
+
+        self._goal_overall_funded = goal_overall_funded
+
+    @property
+    def goal_overall_left(self):
+        """Gets the goal_overall_left of this Category.  # noqa: E501
+
+        The amount of funding still needed to complete the goal within the current goal period.  # noqa: E501
+
+        :return: The goal_overall_left of this Category.  # noqa: E501
+        :rtype: int
+        """
+        return self._goal_overall_left
+
+    @goal_overall_left.setter
+    def goal_overall_left(self, goal_overall_left):
+        """Sets the goal_overall_left of this Category.
+
+        The amount of funding still needed to complete the goal within the current goal period.  # noqa: E501
+
+        :param goal_overall_left: The goal_overall_left of this Category.  # noqa: E501
+        :type: int
+        """
+
+        self._goal_overall_left = goal_overall_left
 
     @property
     def deleted(self):

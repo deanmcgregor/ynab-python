@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from ynab.models.account_wrapper import AccountWrapper  # noqa: F401,E501
 
 
 class AccountResponse(object):
@@ -30,7 +29,7 @@ class AccountResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data': 'AccountWrapper'
+        'data': 'object'
     }
 
     attribute_map = {
@@ -49,7 +48,7 @@ class AccountResponse(object):
 
 
         :return: The data of this AccountResponse.  # noqa: E501
-        :rtype: AccountWrapper
+        :rtype: object
         """
         return self._data
 
@@ -59,7 +58,7 @@ class AccountResponse(object):
 
 
         :param data: The data of this AccountResponse.  # noqa: E501
-        :type: AccountWrapper
+        :type: object
         """
 
         self._data = data

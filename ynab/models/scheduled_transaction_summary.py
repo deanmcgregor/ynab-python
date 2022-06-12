@@ -78,12 +78,17 @@ class ScheduledTransactionSummary(object):
         self.date_next = date_next
         self.frequency = frequency
         self.amount = amount
-        self.memo = memo
-        self.flag_color = flag_color
+        if memo is not None:
+            self.memo = memo
+        if flag_color is not None:
+            self.flag_color = flag_color
         self.account_id = account_id
-        self.payee_id = payee_id
-        self.category_id = category_id
-        self.transfer_account_id = transfer_account_id
+        if payee_id is not None:
+            self.payee_id = payee_id
+        if category_id is not None:
+            self.category_id = category_id
+        if transfer_account_id is not None:
+            self.transfer_account_id = transfer_account_id
         self.deleted = deleted
 
     @property

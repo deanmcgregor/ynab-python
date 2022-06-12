@@ -64,10 +64,14 @@ class ScheduledSubTransaction(object):
         self.id = id
         self.scheduled_transaction_id = scheduled_transaction_id
         self.amount = amount
-        self.memo = memo
-        self.payee_id = payee_id
-        self.category_id = category_id
-        self.transfer_account_id = transfer_account_id
+        if memo is not None:
+            self.memo = memo
+        if payee_id is not None:
+            self.payee_id = payee_id
+        if category_id is not None:
+            self.category_id = category_id
+        if transfer_account_id is not None:
+            self.transfer_account_id = transfer_account_id
         self.deleted = deleted
 
     @property

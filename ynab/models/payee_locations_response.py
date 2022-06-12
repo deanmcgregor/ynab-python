@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from ynab.models.payee_locations_wrapper import PayeeLocationsWrapper  # noqa: F401,E501
 
 
 class PayeeLocationsResponse(object):
@@ -30,7 +29,7 @@ class PayeeLocationsResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data': 'PayeeLocationsWrapper'
+        'data': 'object'
     }
 
     attribute_map = {
@@ -49,7 +48,7 @@ class PayeeLocationsResponse(object):
 
 
         :return: The data of this PayeeLocationsResponse.  # noqa: E501
-        :rtype: PayeeLocationsWrapper
+        :rtype: object
         """
         return self._data
 
@@ -59,7 +58,7 @@ class PayeeLocationsResponse(object):
 
 
         :param data: The data of this PayeeLocationsResponse.  # noqa: E501
-        :type: PayeeLocationsWrapper
+        :type: object
         """
 
         self._data = data

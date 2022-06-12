@@ -85,17 +85,25 @@ class TransactionSummary(object):
         self.id = id
         self._date = _date
         self.amount = amount
-        self.memo = memo
+        if memo is not None:
+            self.memo = memo
         self.cleared = cleared
         self.approved = approved
-        self.flag_color = flag_color
+        if flag_color is not None:
+            self.flag_color = flag_color
         self.account_id = account_id
-        self.payee_id = payee_id
-        self.category_id = category_id
-        self.transfer_account_id = transfer_account_id
-        self.transfer_transaction_id = transfer_transaction_id
-        self.matched_transaction_id = matched_transaction_id
-        self.import_id = import_id
+        if payee_id is not None:
+            self.payee_id = payee_id
+        if category_id is not None:
+            self.category_id = category_id
+        if transfer_account_id is not None:
+            self.transfer_account_id = transfer_account_id
+        if transfer_transaction_id is not None:
+            self.transfer_transaction_id = transfer_transaction_id
+        if matched_transaction_id is not None:
+            self.matched_transaction_id = matched_transaction_id
+        if import_id is not None:
+            self.import_id = import_id
         self.deleted = deleted
 
     @property
@@ -123,6 +131,7 @@ class TransactionSummary(object):
     def _date(self):
         """Gets the _date of this TransactionSummary.  # noqa: E501
 
+        The transaction date in ISO format (e.g. 2016-12-01)  # noqa: E501
 
         :return: The _date of this TransactionSummary.  # noqa: E501
         :rtype: date
@@ -133,6 +142,7 @@ class TransactionSummary(object):
     def _date(self, _date):
         """Sets the _date of this TransactionSummary.
 
+        The transaction date in ISO format (e.g. 2016-12-01)  # noqa: E501
 
         :param _date: The _date of this TransactionSummary.  # noqa: E501
         :type: date

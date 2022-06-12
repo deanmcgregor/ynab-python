@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from ynab.models.month_summaries_wrapper import MonthSummariesWrapper  # noqa: F401,E501
 
 
 class MonthSummariesResponse(object):
@@ -30,7 +29,7 @@ class MonthSummariesResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data': 'MonthSummariesWrapper'
+        'data': 'object'
     }
 
     attribute_map = {
@@ -49,7 +48,7 @@ class MonthSummariesResponse(object):
 
 
         :return: The data of this MonthSummariesResponse.  # noqa: E501
-        :rtype: MonthSummariesWrapper
+        :rtype: object
         """
         return self._data
 
@@ -59,7 +58,7 @@ class MonthSummariesResponse(object):
 
 
         :param data: The data of this MonthSummariesResponse.  # noqa: E501
-        :type: MonthSummariesWrapper
+        :type: object
         """
 
         self._data = data

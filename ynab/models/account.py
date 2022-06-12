@@ -39,6 +39,8 @@ class Account(object):
         'cleared_balance': 'int',
         'uncleared_balance': 'int',
         'transfer_payee_id': 'str',
+        'direct_import_linked': 'bool',
+        'direct_import_in_error': 'bool',
         'deleted': 'bool'
     }
 
@@ -53,10 +55,12 @@ class Account(object):
         'cleared_balance': 'cleared_balance',
         'uncleared_balance': 'uncleared_balance',
         'transfer_payee_id': 'transfer_payee_id',
+        'direct_import_linked': 'direct_import_linked',
+        'direct_import_in_error': 'direct_import_in_error',
         'deleted': 'deleted'
     }
 
-    def __init__(self, id=None, name=None, type=None, on_budget=None, closed=None, note=None, balance=None, cleared_balance=None, uncleared_balance=None, transfer_payee_id=None, deleted=None):  # noqa: E501
+    def __init__(self, id=None, name=None, type=None, on_budget=None, closed=None, note=None, balance=None, cleared_balance=None, uncleared_balance=None, transfer_payee_id=None, direct_import_linked=None, direct_import_in_error=None, deleted=None):  # noqa: E501
         """Account - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
@@ -68,6 +72,8 @@ class Account(object):
         self._cleared_balance = None
         self._uncleared_balance = None
         self._transfer_payee_id = None
+        self._direct_import_linked = None
+        self._direct_import_in_error = None
         self._deleted = None
         self.discriminator = None
         self.id = id
@@ -75,11 +81,16 @@ class Account(object):
         self.type = type
         self.on_budget = on_budget
         self.closed = closed
-        self.note = note
+        if note is not None:
+            self.note = note
         self.balance = balance
         self.cleared_balance = cleared_balance
         self.uncleared_balance = uncleared_balance
         self.transfer_payee_id = transfer_payee_id
+        if direct_import_linked is not None:
+            self.direct_import_linked = direct_import_linked
+        if direct_import_in_error is not None:
+            self.direct_import_in_error = direct_import_in_error
         self.deleted = deleted
 
     @property
@@ -311,6 +322,52 @@ class Account(object):
         """
 
         self._transfer_payee_id = transfer_payee_id
+
+    @property
+    def direct_import_linked(self):
+        """Gets the direct_import_linked of this Account.  # noqa: E501
+
+        Whether or not the account is linked to a financial institution for automatic transaction import.  # noqa: E501
+
+        :return: The direct_import_linked of this Account.  # noqa: E501
+        :rtype: bool
+        """
+        return self._direct_import_linked
+
+    @direct_import_linked.setter
+    def direct_import_linked(self, direct_import_linked):
+        """Sets the direct_import_linked of this Account.
+
+        Whether or not the account is linked to a financial institution for automatic transaction import.  # noqa: E501
+
+        :param direct_import_linked: The direct_import_linked of this Account.  # noqa: E501
+        :type: bool
+        """
+
+        self._direct_import_linked = direct_import_linked
+
+    @property
+    def direct_import_in_error(self):
+        """Gets the direct_import_in_error of this Account.  # noqa: E501
+
+        If an account linked to a financial institution (direct_import_linked=true) and the linked connection is not in a healthy state, this will be true.  # noqa: E501
+
+        :return: The direct_import_in_error of this Account.  # noqa: E501
+        :rtype: bool
+        """
+        return self._direct_import_in_error
+
+    @direct_import_in_error.setter
+    def direct_import_in_error(self, direct_import_in_error):
+        """Sets the direct_import_in_error of this Account.
+
+        If an account linked to a financial institution (direct_import_linked=true) and the linked connection is not in a healthy state, this will be true.  # noqa: E501
+
+        :param direct_import_in_error: The direct_import_in_error of this Account.  # noqa: E501
+        :type: bool
+        """
+
+        self._direct_import_in_error = direct_import_in_error
 
     @property
     def deleted(self):

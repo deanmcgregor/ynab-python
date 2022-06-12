@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import ynab
-from ynab.models.month_detail_wrapper import MonthDetailWrapper  # noqa: E501
+from models.save_category_response import SaveCategoryResponse  # noqa: E501
 from ynab.rest import ApiException
 
 
-class TestMonthDetailWrapper(unittest.TestCase):
-    """MonthDetailWrapper unit test stubs"""
+class TestSaveCategoryResponse(unittest.TestCase):
+    """SaveCategoryResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestMonthDetailWrapper(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testMonthDetailWrapper(self):
-        """Test MonthDetailWrapper"""
+    def testSaveCategoryResponse(self):
+        """Test SaveCategoryResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ynab.models.month_detail_wrapper.MonthDetailWrapper()  # noqa: E501
+        # model = ynab.models.save_category_response.SaveCategoryResponse()  # noqa: E501
         pass
 
 

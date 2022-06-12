@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import ynab
-from ynab.models.budget_settings_wrapper import BudgetSettingsWrapper  # noqa: E501
+from models.transactions_import_response import TransactionsImportResponse  # noqa: E501
 from ynab.rest import ApiException
 
 
-class TestBudgetSettingsWrapper(unittest.TestCase):
-    """BudgetSettingsWrapper unit test stubs"""
+class TestTransactionsImportResponse(unittest.TestCase):
+    """TransactionsImportResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestBudgetSettingsWrapper(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testBudgetSettingsWrapper(self):
-        """Test BudgetSettingsWrapper"""
+    def testTransactionsImportResponse(self):
+        """Test TransactionsImportResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ynab.models.budget_settings_wrapper.BudgetSettingsWrapper()  # noqa: E501
+        # model = ynab.models.transactions_import_response.TransactionsImportResponse()  # noqa: E501
         pass
 
 

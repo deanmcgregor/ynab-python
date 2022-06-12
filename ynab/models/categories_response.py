@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from ynab.models.category_groups_wrapper import CategoryGroupsWrapper  # noqa: F401,E501
 
 
 class CategoriesResponse(object):
@@ -30,7 +29,7 @@ class CategoriesResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data': 'CategoryGroupsWrapper'
+        'data': 'object'
     }
 
     attribute_map = {
@@ -49,7 +48,7 @@ class CategoriesResponse(object):
 
 
         :return: The data of this CategoriesResponse.  # noqa: E501
-        :rtype: CategoryGroupsWrapper
+        :rtype: object
         """
         return self._data
 
@@ -59,7 +58,7 @@ class CategoriesResponse(object):
 
 
         :param data: The data of this CategoriesResponse.  # noqa: E501
-        :type: CategoryGroupsWrapper
+        :type: object
         """
 
         self._data = data

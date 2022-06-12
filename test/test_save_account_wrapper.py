@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import ynab
-from ynab.models.hybrid_transactions_wrapper import HybridTransactionsWrapper  # noqa: E501
+from models.save_account_wrapper import SaveAccountWrapper  # noqa: E501
 from ynab.rest import ApiException
 
 
-class TestHybridTransactionsWrapper(unittest.TestCase):
-    """HybridTransactionsWrapper unit test stubs"""
+class TestSaveAccountWrapper(unittest.TestCase):
+    """SaveAccountWrapper unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestHybridTransactionsWrapper(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testHybridTransactionsWrapper(self):
-        """Test HybridTransactionsWrapper"""
+    def testSaveAccountWrapper(self):
+        """Test SaveAccountWrapper"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ynab.models.hybrid_transactions_wrapper.HybridTransactionsWrapper()  # noqa: E501
+        # model = ynab.models.save_account_wrapper.SaveAccountWrapper()  # noqa: E501
         pass
 
 

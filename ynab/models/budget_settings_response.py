@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from ynab.models.budget_settings_wrapper import BudgetSettingsWrapper  # noqa: F401,E501
 
 
 class BudgetSettingsResponse(object):
@@ -30,7 +29,7 @@ class BudgetSettingsResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data': 'BudgetSettingsWrapper'
+        'data': 'object'
     }
 
     attribute_map = {
@@ -49,7 +48,7 @@ class BudgetSettingsResponse(object):
 
 
         :return: The data of this BudgetSettingsResponse.  # noqa: E501
-        :rtype: BudgetSettingsWrapper
+        :rtype: object
         """
         return self._data
 
@@ -59,7 +58,7 @@ class BudgetSettingsResponse(object):
 
 
         :param data: The data of this BudgetSettingsResponse.  # noqa: E501
-        :type: BudgetSettingsWrapper
+        :type: object
         """
 
         self._data = data

@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from ynab.models.bulk_id_wrapper import BulkIdWrapper  # noqa: F401,E501
 
 
 class BulkResponse(object):
@@ -30,7 +29,7 @@ class BulkResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data': 'BulkIdWrapper'
+        'data': 'object'
     }
 
     attribute_map = {
@@ -49,7 +48,7 @@ class BulkResponse(object):
 
 
         :return: The data of this BulkResponse.  # noqa: E501
-        :rtype: BulkIdWrapper
+        :rtype: object
         """
         return self._data
 
@@ -59,7 +58,7 @@ class BulkResponse(object):
 
 
         :param data: The data of this BulkResponse.  # noqa: E501
-        :type: BulkIdWrapper
+        :type: object
         """
 
         self._data = data

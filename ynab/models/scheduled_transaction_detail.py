@@ -52,8 +52,10 @@ class ScheduledTransactionDetail(ScheduledTransactionSummary):
         self._subtransactions = None
         self.discriminator = None
         self.account_name = account_name
-        self.payee_name = payee_name
-        self.category_name = category_name
+        if payee_name is not None:
+            self.payee_name = payee_name
+        if category_name is not None:
+            self.category_name = category_name
         self.subtransactions = subtransactions
 
     @property

@@ -28,6 +28,13 @@ class TestAccountsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_create_account(self):
+        """Test case for create_account
+
+        Create a new account  # noqa: E501
+        """
+        pass
+
     def test_get_account_by_id(self):
         """Test case for get_account_by_id
 

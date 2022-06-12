@@ -70,6 +70,13 @@ class TestTransactionsApi(unittest.TestCase):
         """
         pass
 
+    def test_import_transactions(self):
+        """Test case for import_transactions
+
+        Import transactions  # noqa: E501
+        """
+        pass
+
     def test_update_transaction(self):
         """Test case for update_transaction
 
