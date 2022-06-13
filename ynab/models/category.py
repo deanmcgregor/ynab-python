@@ -142,6 +142,8 @@ class Category(object):
         :param id: The id of this Category.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -163,6 +165,8 @@ class Category(object):
         :param category_group_id: The category_group_id of this Category.  # noqa: E501
         :type: str
         """
+        if category_group_id is None:
+            raise ValueError("Invalid value for `category_group_id`, must not be `None`")  # noqa: E501
 
         self._category_group_id = category_group_id
 
@@ -184,6 +188,8 @@ class Category(object):
         :param name: The name of this Category.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -207,6 +213,8 @@ class Category(object):
         :param hidden: The hidden of this Category.  # noqa: E501
         :type: bool
         """
+        if hidden is None:
+            raise ValueError("Invalid value for `hidden`, must not be `None`")  # noqa: E501
 
         self._hidden = hidden
 
@@ -274,6 +282,8 @@ class Category(object):
         :param budgeted: The budgeted of this Category.  # noqa: E501
         :type: int
         """
+        if budgeted is None:
+            raise ValueError("Invalid value for `budgeted`, must not be `None`")  # noqa: E501
 
         self._budgeted = budgeted
 
@@ -297,6 +307,8 @@ class Category(object):
         :param activity: The activity of this Category.  # noqa: E501
         :type: int
         """
+        if activity is None:
+            raise ValueError("Invalid value for `activity`, must not be `None`")  # noqa: E501
 
         self._activity = activity
 
@@ -320,6 +332,8 @@ class Category(object):
         :param balance: The balance of this Category.  # noqa: E501
         :type: int
         """
+        if balance is None:
+            raise ValueError("Invalid value for `balance`, must not be `None`")  # noqa: E501
 
         self._balance = balance
 
@@ -556,6 +570,8 @@ class Category(object):
         :param deleted: The deleted of this Category.  # noqa: E501
         :type: bool
         """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
 
         self._deleted = deleted
 

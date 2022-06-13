@@ -91,6 +91,8 @@ class ScheduledSubTransaction(object):
         :param id: The id of this ScheduledSubTransaction.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -112,6 +114,8 @@ class ScheduledSubTransaction(object):
         :param scheduled_transaction_id: The scheduled_transaction_id of this ScheduledSubTransaction.  # noqa: E501
         :type: str
         """
+        if scheduled_transaction_id is None:
+            raise ValueError("Invalid value for `scheduled_transaction_id`, must not be `None`")  # noqa: E501
 
         self._scheduled_transaction_id = scheduled_transaction_id
 
@@ -135,6 +139,8 @@ class ScheduledSubTransaction(object):
         :param amount: The amount of this ScheduledSubTransaction.  # noqa: E501
         :type: int
         """
+        if amount is None:
+            raise ValueError("Invalid value for `amount`, must not be `None`")  # noqa: E501
 
         self._amount = amount
 
@@ -244,6 +250,8 @@ class ScheduledSubTransaction(object):
         :param deleted: The deleted of this ScheduledSubTransaction.  # noqa: E501
         :type: bool
         """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
 
         self._deleted = deleted
 

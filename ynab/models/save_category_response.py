@@ -59,6 +59,8 @@ class SaveCategoryResponse(object):
         :param data: The data of this SaveCategoryResponse.  # noqa: E501
         :type: SaveCategoryResponseData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 

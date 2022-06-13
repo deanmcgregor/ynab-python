@@ -86,6 +86,8 @@ class HybridTransaction(TransactionSummary):
         :param type: The type of this HybridTransaction.  # noqa: E501
         :type: str
         """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
         allowed_values = ["transaction", "subtransaction"]  # noqa: E501
         if type not in allowed_values:
             raise ValueError(
@@ -136,6 +138,8 @@ class HybridTransaction(TransactionSummary):
         :param account_name: The account_name of this HybridTransaction.  # noqa: E501
         :type: str
         """
+        if account_name is None:
+            raise ValueError("Invalid value for `account_name`, must not be `None`")  # noqa: E501
 
         self._account_name = account_name
 

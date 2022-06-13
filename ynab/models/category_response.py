@@ -59,6 +59,8 @@ class CategoryResponse(object):
         :param data: The data of this CategoryResponse.  # noqa: E501
         :type: CategoryResponseData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 

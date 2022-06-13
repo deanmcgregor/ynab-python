@@ -59,6 +59,8 @@ class HybridTransactionsResponse(object):
         :param data: The data of this HybridTransactionsResponse.  # noqa: E501
         :type: HybridTransactionsResponseData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 

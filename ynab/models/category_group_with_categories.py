@@ -67,6 +67,8 @@ class CategoryGroupWithCategories(CategoryGroup):
         :param categories: The categories of this CategoryGroupWithCategories.  # noqa: E501
         :type: list[Category]
         """
+        if categories is None:
+            raise ValueError("Invalid value for `categories`, must not be `None`")  # noqa: E501
 
         self._categories = categories
 

@@ -59,6 +59,8 @@ class MonthDetailResponse(object):
         :param data: The data of this MonthDetailResponse.  # noqa: E501
         :type: MonthDetailResponseData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 

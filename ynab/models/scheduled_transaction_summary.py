@@ -108,6 +108,8 @@ class ScheduledTransactionSummary(object):
         :param id: The id of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -131,6 +133,8 @@ class ScheduledTransactionSummary(object):
         :param date_first: The date_first of this ScheduledTransactionSummary.  # noqa: E501
         :type: date
         """
+        if date_first is None:
+            raise ValueError("Invalid value for `date_first`, must not be `None`")  # noqa: E501
 
         self._date_first = date_first
 
@@ -154,6 +158,8 @@ class ScheduledTransactionSummary(object):
         :param date_next: The date_next of this ScheduledTransactionSummary.  # noqa: E501
         :type: date
         """
+        if date_next is None:
+            raise ValueError("Invalid value for `date_next`, must not be `None`")  # noqa: E501
 
         self._date_next = date_next
 
@@ -175,6 +181,8 @@ class ScheduledTransactionSummary(object):
         :param frequency: The frequency of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
+        if frequency is None:
+            raise ValueError("Invalid value for `frequency`, must not be `None`")  # noqa: E501
         allowed_values = ["never", "daily", "weekly", "everyOtherWeek", "twiceAMonth", "every4Weeks", "monthly", "everyOtherMonth", "every3Months", "every4Months", "twiceAYear", "yearly", "everyOtherYear"]  # noqa: E501
         if frequency not in allowed_values:
             raise ValueError(
@@ -204,6 +212,8 @@ class ScheduledTransactionSummary(object):
         :param amount: The amount of this ScheduledTransactionSummary.  # noqa: E501
         :type: int
         """
+        if amount is None:
+            raise ValueError("Invalid value for `amount`, must not be `None`")  # noqa: E501
 
         self._amount = amount
 
@@ -275,6 +285,8 @@ class ScheduledTransactionSummary(object):
         :param account_id: The account_id of this ScheduledTransactionSummary.  # noqa: E501
         :type: str
         """
+        if account_id is None:
+            raise ValueError("Invalid value for `account_id`, must not be `None`")  # noqa: E501
 
         self._account_id = account_id
 
@@ -363,6 +375,8 @@ class ScheduledTransactionSummary(object):
         :param deleted: The deleted of this ScheduledTransactionSummary.  # noqa: E501
         :type: bool
         """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
 
         self._deleted = deleted
 

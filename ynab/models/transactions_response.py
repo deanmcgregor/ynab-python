@@ -59,6 +59,8 @@ class TransactionsResponse(object):
         :param data: The data of this TransactionsResponse.  # noqa: E501
         :type: TransactionsResponseData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 

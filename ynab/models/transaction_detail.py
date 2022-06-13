@@ -79,6 +79,8 @@ class TransactionDetail(TransactionSummary):
         :param account_name: The account_name of this TransactionDetail.  # noqa: E501
         :type: str
         """
+        if account_name is None:
+            raise ValueError("Invalid value for `account_name`, must not be `None`")  # noqa: E501
 
         self._account_name = account_name
 
@@ -144,6 +146,8 @@ class TransactionDetail(TransactionSummary):
         :param subtransactions: The subtransactions of this TransactionDetail.  # noqa: E501
         :type: list[SubTransaction]
         """
+        if subtransactions is None:
+            raise ValueError("Invalid value for `subtransactions`, must not be `None`")  # noqa: E501
 
         self._subtransactions = subtransactions
 

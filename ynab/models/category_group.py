@@ -71,6 +71,8 @@ class CategoryGroup(object):
         :param id: The id of this CategoryGroup.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -92,6 +94,8 @@ class CategoryGroup(object):
         :param name: The name of this CategoryGroup.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -115,6 +119,8 @@ class CategoryGroup(object):
         :param hidden: The hidden of this CategoryGroup.  # noqa: E501
         :type: bool
         """
+        if hidden is None:
+            raise ValueError("Invalid value for `hidden`, must not be `None`")  # noqa: E501
 
         self._hidden = hidden
 
@@ -138,6 +144,8 @@ class CategoryGroup(object):
         :param deleted: The deleted of this CategoryGroup.  # noqa: E501
         :type: bool
         """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
 
         self._deleted = deleted
 

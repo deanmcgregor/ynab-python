@@ -15,7 +15,7 @@ git grep -lz test | xargs -0 sed -i '' 's/from api\./from ynab\.api\./g'
 # Fix the api function call path
 git grep -lz test | xargs -0 sed -i '' 's/self\.api = api\./self\.api = ynab\.api\./g'
 
-git ls-files -z ynab/models | xargs -0 perl -i -p0e 's/\s+if \w+ is None:\n\s+raise ValueError.*//g'
+# git ls-files -z ynab/models | xargs -0 perl -i -p0e 's/\s+if \w+ is None:\n\s+raise ValueError.*//g'
 
 # Run the tests
 nosetests

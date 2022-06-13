@@ -69,6 +69,8 @@ class SaveAccount(object):
         :param name: The name of this SaveAccount.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -92,6 +94,8 @@ class SaveAccount(object):
         :param type: The type of this SaveAccount.  # noqa: E501
         :type: str
         """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
         allowed_values = ["checking", "savings", "creditCard", "cash", "lineOfCredit", "otherAsset", "otherLiability"]  # noqa: E501
         if type not in allowed_values:
             raise ValueError(
@@ -121,6 +125,8 @@ class SaveAccount(object):
         :param balance: The balance of this SaveAccount.  # noqa: E501
         :type: int
         """
+        if balance is None:
+            raise ValueError("Invalid value for `balance`, must not be `None`")  # noqa: E501
 
         self._balance = balance
 

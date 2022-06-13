@@ -81,6 +81,8 @@ class SaveSubTransaction(object):
         :param amount: The amount of this SaveSubTransaction.  # noqa: E501
         :type: int
         """
+        if amount is None:
+            raise ValueError("Invalid value for `amount`, must not be `None`")  # noqa: E501
 
         self._amount = amount
 

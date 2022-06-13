@@ -123,6 +123,8 @@ class TransactionSummary(object):
         :param id: The id of this TransactionSummary.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -146,6 +148,8 @@ class TransactionSummary(object):
         :param _date: The _date of this TransactionSummary.  # noqa: E501
         :type: date
         """
+        if _date is None:
+            raise ValueError("Invalid value for `_date`, must not be `None`")  # noqa: E501
 
         self.__date = _date
 
@@ -169,6 +173,8 @@ class TransactionSummary(object):
         :param amount: The amount of this TransactionSummary.  # noqa: E501
         :type: int
         """
+        if amount is None:
+            raise ValueError("Invalid value for `amount`, must not be `None`")  # noqa: E501
 
         self._amount = amount
 
@@ -213,6 +219,8 @@ class TransactionSummary(object):
         :param cleared: The cleared of this TransactionSummary.  # noqa: E501
         :type: str
         """
+        if cleared is None:
+            raise ValueError("Invalid value for `cleared`, must not be `None`")  # noqa: E501
         allowed_values = ["cleared", "uncleared", "reconciled"]  # noqa: E501
         if cleared not in allowed_values:
             raise ValueError(
@@ -242,6 +250,8 @@ class TransactionSummary(object):
         :param approved: The approved of this TransactionSummary.  # noqa: E501
         :type: bool
         """
+        if approved is None:
+            raise ValueError("Invalid value for `approved`, must not be `None`")  # noqa: E501
 
         self._approved = approved
 
@@ -292,6 +302,8 @@ class TransactionSummary(object):
         :param account_id: The account_id of this TransactionSummary.  # noqa: E501
         :type: str
         """
+        if account_id is None:
+            raise ValueError("Invalid value for `account_id`, must not be `None`")  # noqa: E501
 
         self._account_id = account_id
 
@@ -449,6 +461,8 @@ class TransactionSummary(object):
         :param deleted: The deleted of this TransactionSummary.  # noqa: E501
         :type: bool
         """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
 
         self._deleted = deleted
 

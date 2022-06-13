@@ -59,6 +59,8 @@ class UpdateTransactionsWrapper(object):
         :param transactions: The transactions of this UpdateTransactionsWrapper.  # noqa: E501
         :type: list[UpdateTransaction]
         """
+        if transactions is None:
+            raise ValueError("Invalid value for `transactions`, must not be `None`")  # noqa: E501
 
         self._transactions = transactions
 

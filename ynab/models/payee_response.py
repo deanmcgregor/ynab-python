@@ -59,6 +59,8 @@ class PayeeResponse(object):
         :param data: The data of this PayeeResponse.  # noqa: E501
         :type: PayeeResponseData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 
