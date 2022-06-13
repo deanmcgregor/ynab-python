@@ -42,8 +42,8 @@ class BudgetsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: BudgetDetailResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -65,8 +65,8 @@ class BudgetsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: BudgetDetailResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -141,7 +141,7 @@ class BudgetsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: BudgetSettingsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -163,7 +163,7 @@ class BudgetsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: BudgetSettingsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -236,6 +236,7 @@ class BudgetsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param bool include_accounts: Whether to include the list of budget accounts
         :return: BudgetSummaryResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -257,12 +258,13 @@ class BudgetsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param bool include_accounts: Whether to include the list of budget accounts
         :return: BudgetSummaryResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['include_accounts']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -283,6 +285,8 @@ class BudgetsApi(object):
         path_params = {}
 
         query_params = []
+        if 'include_accounts' in params:
+            query_params.append(('include_accounts', params['include_accounts']))  # noqa: E501
 
         header_params = {}
 

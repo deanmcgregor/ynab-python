@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import ynab
-from models.save_category_response import SaveCategoryResponse  # noqa: E501
+from ynab.models.save_category_response import SaveCategoryResponse  # noqa: E501
 from ynab.rest import ApiException
 
 

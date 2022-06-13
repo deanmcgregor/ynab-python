@@ -42,7 +42,7 @@ class MonthsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param date month: The budget month in ISO format (e.g. 2016-12-01) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :return: MonthDetailResponse
                  If the method is called asynchronously,
@@ -65,7 +65,7 @@ class MonthsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param date month: The budget month in ISO format (e.g. 2016-12-01) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :return: MonthDetailResponse
                  If the method is called asynchronously,
@@ -145,8 +145,8 @@ class MonthsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: MonthSummariesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -168,8 +168,8 @@ class MonthsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: MonthSummariesResponse
                  If the method is called asynchronously,
                  returns the request thread.

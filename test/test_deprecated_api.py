@@ -23,7 +23,7 @@ class TestDeprecatedApi(unittest.TestCase):
     """DeprecatedApi unit test stubs"""
 
     def setUp(self):
-        self.api = ynab.api.deprecated_api.DeprecatedApi()  # noqa: E501
+        self.api = DeprecatedApi()  # noqa: E501
 
     def tearDown(self):
         pass

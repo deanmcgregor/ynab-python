@@ -23,7 +23,7 @@ class TestPayeeLocationsApi(unittest.TestCase):
     """PayeeLocationsApi unit test stubs"""
 
     def setUp(self):
-        self.api = ynab.api.payee_locations_api.PayeeLocationsApi()  # noqa: E501
+        self.api = PayeeLocationsApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import ynab
-from models.transactions_import_response import TransactionsImportResponse  # noqa: E501
+from ynab.models.transactions_import_response import TransactionsImportResponse  # noqa: E501
 from ynab.rest import ApiException
 
 

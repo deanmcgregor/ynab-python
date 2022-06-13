@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import ynab
-from models.update_transactions_wrapper import UpdateTransactionsWrapper  # noqa: E501
+from ynab.models.update_transactions_wrapper import UpdateTransactionsWrapper  # noqa: E501
 from ynab.rest import ApiException
 
 

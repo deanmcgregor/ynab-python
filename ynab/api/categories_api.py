@@ -42,8 +42,8 @@ class CategoriesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: CategoriesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -65,8 +65,8 @@ class CategoriesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: CategoriesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -141,7 +141,7 @@ class CategoriesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str category_id: The id of the category (required)
         :return: CategoryResponse
                  If the method is called asynchronously,
@@ -164,7 +164,7 @@ class CategoriesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str category_id: The id of the category (required)
         :return: CategoryResponse
                  If the method is called asynchronously,
@@ -244,7 +244,7 @@ class CategoriesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param date month: The budget month in ISO format (e.g. 2016-12-01) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :param str category_id: The id of the category (required)
         :return: CategoryResponse
@@ -268,7 +268,7 @@ class CategoriesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param date month: The budget month in ISO format (e.g. 2016-12-01) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :param str category_id: The id of the category (required)
         :return: CategoryResponse
@@ -348,18 +348,18 @@ class CategoriesApi(object):
     def update_month_category(self, body, budget_id, month, category_id, **kwargs):  # noqa: E501
         """Update a category for a specific month  # noqa: E501
 
-        Update a category for a specific month  # noqa: E501
+        Update a category for a specific month.  Only `budgeted` amount can be updated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_month_category(body, budget_id, month, category_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SaveMonthCategoryWrapper body: The category to update (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param SaveMonthCategoryWrapper body: The category to update.  Only `budgeted` amount can be updated and any other fields specified will be ignored. (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param date month: The budget month in ISO format (e.g. 2016-12-01) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :param str category_id: The id of the category (required)
-        :return: CategoryResponse
+        :return: SaveCategoryResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -373,18 +373,18 @@ class CategoriesApi(object):
     def update_month_category_with_http_info(self, body, budget_id, month, category_id, **kwargs):  # noqa: E501
         """Update a category for a specific month  # noqa: E501
 
-        Update a category for a specific month  # noqa: E501
+        Update a category for a specific month.  Only `budgeted` amount can be updated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_month_category_with_http_info(body, budget_id, month, category_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SaveMonthCategoryWrapper body: The category to update (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param SaveMonthCategoryWrapper body: The category to update.  Only `budgeted` amount can be updated and any other fields specified will be ignored. (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param date month: The budget month in ISO format (e.g. 2016-12-01) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :param str category_id: The id of the category (required)
-        :return: CategoryResponse
+        :return: SaveCategoryResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -460,7 +460,7 @@ class CategoriesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='CategoryResponse',  # noqa: E501
+            response_type='SaveCategoryResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

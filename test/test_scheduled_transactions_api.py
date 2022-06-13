@@ -23,7 +23,7 @@ class TestScheduledTransactionsApi(unittest.TestCase):
     """ScheduledTransactionsApi unit test stubs"""
 
     def setUp(self):
-        self.api = ynab.api.scheduled_transactions_api.ScheduledTransactionsApi()  # noqa: E501
+        self.api = ScheduledTransactionsApi()  # noqa: E501
 
     def tearDown(self):
         pass

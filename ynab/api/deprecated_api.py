@@ -43,7 +43,7 @@ class DeprecatedApi(object):
 
         :param async_req bool
         :param BulkTransactions body: The list of transactions to create (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: BulkResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -66,7 +66,7 @@ class DeprecatedApi(object):
 
         :param async_req bool
         :param BulkTransactions body: The list of transactions to create (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: BulkResponse
                  If the method is called asynchronously,
                  returns the request thread.

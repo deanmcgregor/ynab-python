@@ -59,7 +59,25 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = ynab.AccountsApi(ynab.ApiClient(configuration))
-budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
+body = ynab.SaveAccountWrapper() # SaveAccountWrapper | The account to create.
+budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget)
+
+try:
+    # Create a new account
+    api_response = api_instance.create_account(body, budget_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountsApi->create_account: %s\n" % e)
+
+# Configure API key authorization: bearer
+configuration = ynab.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = ynab.AccountsApi(ynab.ApiClient(configuration))
+budget_id = 'budget_id_example' # str | The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 account_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The id of the account
 
 try:
@@ -77,8 +95,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = ynab.AccountsApi(ynab.ApiClient(configuration))
-budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
-last_knowledge_of_server = 789 # int | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
+budget_id = 'budget_id_example' # str | The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+last_knowledge_of_server = 789 # int | The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included. (optional)
 
 try:
     # Account list
@@ -94,6 +112,7 @@ All URIs are relative to *https://api.youneedabudget.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountsApi* | [**create_account**](docs/AccountsApi.md#create_account) | **POST** /budgets/{budget_id}/accounts | Create a new account
 *AccountsApi* | [**get_account_by_id**](docs/AccountsApi.md#get_account_by_id) | **GET** /budgets/{budget_id}/accounts/{account_id} | Single account
 *AccountsApi* | [**get_accounts**](docs/AccountsApi.md#get_accounts) | **GET** /budgets/{budget_id}/accounts | Account list
 *BudgetsApi* | [**get_budget_by_id**](docs/BudgetsApi.md#get_budget_by_id) | **GET** /budgets/{budget_id} | Single budget
@@ -119,6 +138,7 @@ Class | Method | HTTP request | Description
 *TransactionsApi* | [**get_transactions_by_account**](docs/TransactionsApi.md#get_transactions_by_account) | **GET** /budgets/{budget_id}/accounts/{account_id}/transactions | List account transactions
 *TransactionsApi* | [**get_transactions_by_category**](docs/TransactionsApi.md#get_transactions_by_category) | **GET** /budgets/{budget_id}/categories/{category_id}/transactions | List category transactions
 *TransactionsApi* | [**get_transactions_by_payee**](docs/TransactionsApi.md#get_transactions_by_payee) | **GET** /budgets/{budget_id}/payees/{payee_id}/transactions | List payee transactions
+*TransactionsApi* | [**import_transactions**](docs/TransactionsApi.md#import_transactions) | **POST** /budgets/{budget_id}/transactions/import | Import transactions
 *TransactionsApi* | [**update_transaction**](docs/TransactionsApi.md#update_transaction) | **PUT** /budgets/{budget_id}/transactions/{transaction_id} | Updates an existing transaction
 *TransactionsApi* | [**update_transactions**](docs/TransactionsApi.md#update_transactions) | **PATCH** /budgets/{budget_id}/transactions | Update multiple transactions
 *UserApi* | [**get_user**](docs/UserApi.md#get_user) | **GET** /user | User info
@@ -127,75 +147,85 @@ Class | Method | HTTP request | Description
 
  - [Account](docs/Account.md)
  - [AccountResponse](docs/AccountResponse.md)
- - [AccountWrapper](docs/AccountWrapper.md)
+ - [AccountResponseData](docs/AccountResponseData.md)
  - [AccountsResponse](docs/AccountsResponse.md)
- - [AccountsWrapper](docs/AccountsWrapper.md)
+ - [AccountsResponseData](docs/AccountsResponseData.md)
  - [BudgetDetail](docs/BudgetDetail.md)
  - [BudgetDetailResponse](docs/BudgetDetailResponse.md)
- - [BudgetDetailWrapper](docs/BudgetDetailWrapper.md)
+ - [BudgetDetailResponseData](docs/BudgetDetailResponseData.md)
  - [BudgetSettings](docs/BudgetSettings.md)
  - [BudgetSettingsResponse](docs/BudgetSettingsResponse.md)
- - [BudgetSettingsWrapper](docs/BudgetSettingsWrapper.md)
+ - [BudgetSettingsResponseData](docs/BudgetSettingsResponseData.md)
  - [BudgetSummary](docs/BudgetSummary.md)
  - [BudgetSummaryResponse](docs/BudgetSummaryResponse.md)
- - [BudgetSummaryWrapper](docs/BudgetSummaryWrapper.md)
- - [BulkIdWrapper](docs/BulkIdWrapper.md)
- - [BulkIds](docs/BulkIds.md)
+ - [BudgetSummaryResponseData](docs/BudgetSummaryResponseData.md)
  - [BulkResponse](docs/BulkResponse.md)
+ - [BulkResponseData](docs/BulkResponseData.md)
+ - [BulkResponseDataBulk](docs/BulkResponseDataBulk.md)
  - [BulkTransactions](docs/BulkTransactions.md)
  - [CategoriesResponse](docs/CategoriesResponse.md)
+ - [CategoriesResponseData](docs/CategoriesResponseData.md)
  - [Category](docs/Category.md)
  - [CategoryGroup](docs/CategoryGroup.md)
  - [CategoryGroupWithCategories](docs/CategoryGroupWithCategories.md)
- - [CategoryGroupsWrapper](docs/CategoryGroupsWrapper.md)
  - [CategoryResponse](docs/CategoryResponse.md)
- - [CategoryWrapper](docs/CategoryWrapper.md)
+ - [CategoryResponseData](docs/CategoryResponseData.md)
  - [CurrencyFormat](docs/CurrencyFormat.md)
  - [DateFormat](docs/DateFormat.md)
  - [ErrorDetail](docs/ErrorDetail.md)
  - [ErrorResponse](docs/ErrorResponse.md)
  - [HybridTransaction](docs/HybridTransaction.md)
  - [HybridTransactionsResponse](docs/HybridTransactionsResponse.md)
- - [HybridTransactionsWrapper](docs/HybridTransactionsWrapper.md)
+ - [HybridTransactionsResponseData](docs/HybridTransactionsResponseData.md)
  - [MonthDetail](docs/MonthDetail.md)
  - [MonthDetailResponse](docs/MonthDetailResponse.md)
- - [MonthDetailWrapper](docs/MonthDetailWrapper.md)
+ - [MonthDetailResponseData](docs/MonthDetailResponseData.md)
  - [MonthSummariesResponse](docs/MonthSummariesResponse.md)
- - [MonthSummariesWrapper](docs/MonthSummariesWrapper.md)
+ - [MonthSummariesResponseData](docs/MonthSummariesResponseData.md)
  - [MonthSummary](docs/MonthSummary.md)
  - [Payee](docs/Payee.md)
  - [PayeeLocation](docs/PayeeLocation.md)
  - [PayeeLocationResponse](docs/PayeeLocationResponse.md)
- - [PayeeLocationWrapper](docs/PayeeLocationWrapper.md)
+ - [PayeeLocationResponseData](docs/PayeeLocationResponseData.md)
  - [PayeeLocationsResponse](docs/PayeeLocationsResponse.md)
- - [PayeeLocationsWrapper](docs/PayeeLocationsWrapper.md)
+ - [PayeeLocationsResponseData](docs/PayeeLocationsResponseData.md)
  - [PayeeResponse](docs/PayeeResponse.md)
- - [PayeeWrapper](docs/PayeeWrapper.md)
+ - [PayeeResponseData](docs/PayeeResponseData.md)
  - [PayeesResponse](docs/PayeesResponse.md)
- - [PayeesWrapper](docs/PayeesWrapper.md)
+ - [PayeesResponseData](docs/PayeesResponseData.md)
+ - [SaveAccount](docs/SaveAccount.md)
+ - [SaveAccountWrapper](docs/SaveAccountWrapper.md)
+ - [SaveCategoryResponse](docs/SaveCategoryResponse.md)
+ - [SaveCategoryResponseData](docs/SaveCategoryResponseData.md)
  - [SaveMonthCategory](docs/SaveMonthCategory.md)
  - [SaveMonthCategoryWrapper](docs/SaveMonthCategoryWrapper.md)
+ - [SaveSubTransaction](docs/SaveSubTransaction.md)
  - [SaveTransaction](docs/SaveTransaction.md)
  - [SaveTransactionWrapper](docs/SaveTransactionWrapper.md)
  - [SaveTransactionsResponse](docs/SaveTransactionsResponse.md)
+ - [SaveTransactionsResponseData](docs/SaveTransactionsResponseData.md)
  - [SaveTransactionsWrapper](docs/SaveTransactionsWrapper.md)
  - [ScheduledSubTransaction](docs/ScheduledSubTransaction.md)
  - [ScheduledTransactionDetail](docs/ScheduledTransactionDetail.md)
  - [ScheduledTransactionResponse](docs/ScheduledTransactionResponse.md)
+ - [ScheduledTransactionResponseData](docs/ScheduledTransactionResponseData.md)
  - [ScheduledTransactionSummary](docs/ScheduledTransactionSummary.md)
- - [ScheduledTransactionWrapper](docs/ScheduledTransactionWrapper.md)
  - [ScheduledTransactionsResponse](docs/ScheduledTransactionsResponse.md)
- - [ScheduledTransactionsWrapper](docs/ScheduledTransactionsWrapper.md)
+ - [ScheduledTransactionsResponseData](docs/ScheduledTransactionsResponseData.md)
  - [SubTransaction](docs/SubTransaction.md)
  - [TransactionDetail](docs/TransactionDetail.md)
  - [TransactionResponse](docs/TransactionResponse.md)
+ - [TransactionResponseData](docs/TransactionResponseData.md)
  - [TransactionSummary](docs/TransactionSummary.md)
- - [TransactionWrapper](docs/TransactionWrapper.md)
+ - [TransactionsImportResponse](docs/TransactionsImportResponse.md)
+ - [TransactionsImportResponseData](docs/TransactionsImportResponseData.md)
  - [TransactionsResponse](docs/TransactionsResponse.md)
- - [TransactionsWrapper](docs/TransactionsWrapper.md)
+ - [TransactionsResponseData](docs/TransactionsResponseData.md)
+ - [UpdateTransaction](docs/UpdateTransaction.md)
+ - [UpdateTransactionsWrapper](docs/UpdateTransactionsWrapper.md)
  - [User](docs/User.md)
  - [UserResponse](docs/UserResponse.md)
- - [UserWrapper](docs/UserWrapper.md)
+ - [UserResponseData](docs/UserResponseData.md)
 
 ## Documentation For Authorization
 

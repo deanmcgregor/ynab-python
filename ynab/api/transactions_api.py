@@ -35,15 +35,15 @@ class TransactionsApi(object):
     def create_transaction(self, body, budget_id, **kwargs):  # noqa: E501
         """Create a single transaction or multiple transactions  # noqa: E501
 
-        Creates a single transaction or multiple transactions.  If you provide a body containing a 'transaction' object, a single transaction will be created and if you provide a body containing a 'transactions' array, multiple transactions will be created.  # noqa: E501
+        Creates a single transaction or multiple transactions.  If you provide a body containing a `transaction` object, a single transaction will be created and if you provide a body containing a `transactions` array, multiple transactions will be created.  Scheduled transactions cannot be created on this endpoint.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_transaction(body, budget_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SaveTransactionsWrapper body: The transaction or transactions to create.  To create a single transaction you can specify a value for the 'transaction' object and to create multiple transactions you can specify an array of 'transactions'.  It is expected that you will only provide a value for one of these objects. (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param SaveTransactionsWrapper body: The transaction or transactions to create.  To create a single transaction you can specify a value for the `transaction` object and to create multiple transactions you can specify an array of `transactions`.  It is expected that you will only provide a value for one of these objects. (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: SaveTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -58,15 +58,15 @@ class TransactionsApi(object):
     def create_transaction_with_http_info(self, body, budget_id, **kwargs):  # noqa: E501
         """Create a single transaction or multiple transactions  # noqa: E501
 
-        Creates a single transaction or multiple transactions.  If you provide a body containing a 'transaction' object, a single transaction will be created and if you provide a body containing a 'transactions' array, multiple transactions will be created.  # noqa: E501
+        Creates a single transaction or multiple transactions.  If you provide a body containing a `transaction` object, a single transaction will be created and if you provide a body containing a `transactions` array, multiple transactions will be created.  Scheduled transactions cannot be created on this endpoint.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_transaction_with_http_info(body, budget_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SaveTransactionsWrapper body: The transaction or transactions to create.  To create a single transaction you can specify a value for the 'transaction' object and to create multiple transactions you can specify an array of 'transactions'.  It is expected that you will only provide a value for one of these objects. (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param SaveTransactionsWrapper body: The transaction or transactions to create.  To create a single transaction you can specify a value for the `transaction` object and to create multiple transactions you can specify an array of `transactions`.  It is expected that you will only provide a value for one of these objects. (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: SaveTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -149,7 +149,7 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str transaction_id: The id of the transaction (required)
         :return: TransactionResponse
                  If the method is called asynchronously,
@@ -172,7 +172,7 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str transaction_id: The id of the transaction (required)
         :return: TransactionResponse
                  If the method is called asynchronously,
@@ -252,10 +252,10 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
-        :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str type: If specified, only transactions of the specified type will be included. \"uncategorized\" and \"unapproved\" are currently supported.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: TransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -277,10 +277,10 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
-        :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str type: If specified, only transactions of the specified type will be included. \"uncategorized\" and \"unapproved\" are currently supported.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: TransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -359,11 +359,11 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str account_id: The id of the account (required)
         :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
-        :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str type: If specified, only transactions of the specified type will be included. \"uncategorized\" and \"unapproved\" are currently supported.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: TransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -385,11 +385,11 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str account_id: The id of the account (required)
         :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
-        :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str type: If specified, only transactions of the specified type will be included. \"uncategorized\" and \"unapproved\" are currently supported.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: TransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -474,11 +474,11 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str category_id: The id of the category (required)
         :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
-        :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str type: If specified, only transactions of the specified type will be included. \"uncategorized\" and \"unapproved\" are currently supported.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: HybridTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -500,11 +500,11 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str category_id: The id of the category (required)
         :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
-        :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str type: If specified, only transactions of the specified type will be included. \"uncategorized\" and \"unapproved\" are currently supported.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: HybridTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -589,11 +589,11 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str payee_id: The id of the payee (required)
         :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
-        :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str type: If specified, only transactions of the specified type will be included. \"uncategorized\" and \"unapproved\" are currently supported.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: HybridTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -615,11 +615,11 @@ class TransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str payee_id: The id of the payee (required)
         :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
-        :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str type: If specified, only transactions of the specified type will be included. \"uncategorized\" and \"unapproved\" are currently supported.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: HybridTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -694,10 +694,105 @@ class TransactionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def import_transactions(self, budget_id, **kwargs):  # noqa: E501
+        """Import transactions  # noqa: E501
+
+        Imports available transactions on all linked accounts for the given budget.  Linked accounts allow transactions to be imported directly from a specified financial institution and this endpoint initiates that import.  Sending a request to this endpoint is the equivalent of clicking \"Import\" on each account in the web application or tapping the \"New Transactions\" banner in the mobile applications.  The response for this endpoint contains the transaction ids that have been imported.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_transactions(budget_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :return: TransactionsImportResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_transactions_with_http_info(budget_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.import_transactions_with_http_info(budget_id, **kwargs)  # noqa: E501
+            return data
+
+    def import_transactions_with_http_info(self, budget_id, **kwargs):  # noqa: E501
+        """Import transactions  # noqa: E501
+
+        Imports available transactions on all linked accounts for the given budget.  Linked accounts allow transactions to be imported directly from a specified financial institution and this endpoint initiates that import.  Sending a request to this endpoint is the equivalent of clicking \"Import\" on each account in the web application or tapping the \"New Transactions\" banner in the mobile applications.  The response for this endpoint contains the transaction ids that have been imported.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_transactions_with_http_info(budget_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :return: TransactionsImportResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['budget_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_transactions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'budget_id' is set
+        if ('budget_id' not in params or
+                params['budget_id'] is None):
+            raise ValueError("Missing the required parameter `budget_id` when calling `import_transactions`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'budget_id' in params:
+            path_params['budget_id'] = params['budget_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/budgets/{budget_id}/transactions/import', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='TransactionsImportResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def update_transaction(self, body, budget_id, transaction_id, **kwargs):  # noqa: E501
         """Updates an existing transaction  # noqa: E501
 
-        Updates a transaction  # noqa: E501
+        Updates a single transaction  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_transaction(body, budget_id, transaction_id, async_req=True)
@@ -705,7 +800,7 @@ class TransactionsApi(object):
 
         :param async_req bool
         :param SaveTransactionWrapper body: The transaction to update (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str transaction_id: The id of the transaction (required)
         :return: TransactionResponse
                  If the method is called asynchronously,
@@ -721,7 +816,7 @@ class TransactionsApi(object):
     def update_transaction_with_http_info(self, body, budget_id, transaction_id, **kwargs):  # noqa: E501
         """Updates an existing transaction  # noqa: E501
 
-        Updates a transaction  # noqa: E501
+        Updates a single transaction  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_transaction_with_http_info(body, budget_id, transaction_id, async_req=True)
@@ -729,7 +824,7 @@ class TransactionsApi(object):
 
         :param async_req bool
         :param SaveTransactionWrapper body: The transaction to update (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str transaction_id: The id of the transaction (required)
         :return: TransactionResponse
                  If the method is called asynchronously,
@@ -812,15 +907,15 @@ class TransactionsApi(object):
     def update_transactions(self, body, budget_id, **kwargs):  # noqa: E501
         """Update multiple transactions  # noqa: E501
 
-        Updates multiple transactions, by 'id' or 'import_id'.  # noqa: E501
+        Updates multiple transactions, by `id` or `import_id`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_transactions(body, budget_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SaveTransactionsWrapper body: The transactions to update.  Optionally, transaction 'id' value(s) can be specified as null and an 'import_id' value can be provided which will allow transaction(s) to updated by their import_id. (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param UpdateTransactionsWrapper body: The transactions to update. Each transaction must have either an `id` or `import_id` specified. If `id` is specified as null an `import_id` value can be provided which will allow transaction(s) to be updated by their `import_id`. If an `id` is specified, it will always be used for lookup. (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: SaveTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -835,15 +930,15 @@ class TransactionsApi(object):
     def update_transactions_with_http_info(self, body, budget_id, **kwargs):  # noqa: E501
         """Update multiple transactions  # noqa: E501
 
-        Updates multiple transactions, by 'id' or 'import_id'.  # noqa: E501
+        Updates multiple transactions, by `id` or `import_id`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_transactions_with_http_info(body, budget_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SaveTransactionsWrapper body: The transactions to update.  Optionally, transaction 'id' value(s) can be specified as null and an 'import_id' value can be provided which will allow transaction(s) to updated by their import_id. (required)
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param UpdateTransactionsWrapper body: The transactions to update. Each transaction must have either an `id` or `import_id` specified. If `id` is specified as null an `import_id` value can be provided which will allow transaction(s) to be updated by their `import_id`. If an `id` is specified, it will always be used for lookup. (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: SaveTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.

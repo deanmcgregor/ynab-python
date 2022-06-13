@@ -23,7 +23,7 @@ class TestAccountsApi(unittest.TestCase):
     """AccountsApi unit test stubs"""
 
     def setUp(self):
-        self.api = ynab.api.accounts_api.AccountsApi()  # noqa: E501
+        self.api = AccountsApi()  # noqa: E501
 
     def tearDown(self):
         pass

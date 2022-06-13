@@ -23,7 +23,7 @@ class TestMonthsApi(unittest.TestCase):
     """MonthsApi unit test stubs"""
 
     def setUp(self):
-        self.api = ynab.api.months_api.MonthsApi()  # noqa: E501
+        self.api = MonthsApi()  # noqa: E501
 
     def tearDown(self):
         pass

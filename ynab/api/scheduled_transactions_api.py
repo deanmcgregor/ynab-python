@@ -42,7 +42,7 @@ class ScheduledTransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str scheduled_transaction_id: The id of the scheduled transaction (required)
         :return: ScheduledTransactionResponse
                  If the method is called asynchronously,
@@ -65,7 +65,7 @@ class ScheduledTransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str scheduled_transaction_id: The id of the scheduled transaction (required)
         :return: ScheduledTransactionResponse
                  If the method is called asynchronously,
@@ -145,7 +145,8 @@ class ScheduledTransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: ScheduledTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -167,13 +168,14 @@ class ScheduledTransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: ScheduledTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['budget_id']  # noqa: E501
+        all_params = ['budget_id', 'last_knowledge_of_server']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -200,6 +202,8 @@ class ScheduledTransactionsApi(object):
             path_params['budget_id'] = params['budget_id']  # noqa: E501
 
         query_params = []
+        if 'last_knowledge_of_server' in params:
+            query_params.append(('last_knowledge_of_server', params['last_knowledge_of_server']))  # noqa: E501
 
         header_params = {}
 

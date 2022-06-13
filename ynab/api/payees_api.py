@@ -35,14 +35,14 @@ class PayeesApi(object):
     def get_payee_by_id(self, budget_id, payee_id, **kwargs):  # noqa: E501
         """Single payee  # noqa: E501
 
-        Returns single payee  # noqa: E501
+        Returns a single payee  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_payee_by_id(budget_id, payee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str payee_id: The id of the payee (required)
         :return: PayeeResponse
                  If the method is called asynchronously,
@@ -58,14 +58,14 @@ class PayeesApi(object):
     def get_payee_by_id_with_http_info(self, budget_id, payee_id, **kwargs):  # noqa: E501
         """Single payee  # noqa: E501
 
-        Returns single payee  # noqa: E501
+        Returns a single payee  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_payee_by_id_with_http_info(budget_id, payee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str payee_id: The id of the payee (required)
         :return: PayeeResponse
                  If the method is called asynchronously,
@@ -145,8 +145,8 @@ class PayeesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: PayeesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -168,8 +168,8 @@ class PayeesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
         :return: PayeesResponse
                  If the method is called asynchronously,
                  returns the request thread.

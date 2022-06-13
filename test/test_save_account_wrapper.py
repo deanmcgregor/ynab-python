@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import ynab
-from models.save_account_wrapper import SaveAccountWrapper  # noqa: E501
+from ynab.models.save_account_wrapper import SaveAccountWrapper  # noqa: E501
 from ynab.rest import ApiException
 
 

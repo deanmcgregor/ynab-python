@@ -42,7 +42,7 @@ class PayeeLocationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str payee_location_id: id of payee location (required)
         :return: PayeeLocationResponse
                  If the method is called asynchronously,
@@ -65,7 +65,7 @@ class PayeeLocationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str payee_location_id: id of payee location (required)
         :return: PayeeLocationResponse
                  If the method is called asynchronously,
@@ -145,7 +145,7 @@ class PayeeLocationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: PayeeLocationsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -167,7 +167,7 @@ class PayeeLocationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :return: PayeeLocationsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -233,14 +233,14 @@ class PayeeLocationsApi(object):
     def get_payee_locations_by_payee(self, budget_id, payee_id, **kwargs):  # noqa: E501
         """List locations for a payee  # noqa: E501
 
-        Returns all payee locations for the specified payee  # noqa: E501
+        Returns all payee locations for a specified payee  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_payee_locations_by_payee(budget_id, payee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str payee_id: id of payee (required)
         :return: PayeeLocationsResponse
                  If the method is called asynchronously,
@@ -256,14 +256,14 @@ class PayeeLocationsApi(object):
     def get_payee_locations_by_payee_with_http_info(self, budget_id, payee_id, **kwargs):  # noqa: E501
         """List locations for a payee  # noqa: E501
 
-        Returns all payee locations for the specified payee  # noqa: E501
+        Returns all payee locations for a specified payee  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_payee_locations_by_payee_with_http_info(budget_id, payee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
+        :param str budget_id: The id of the budget. \"last-used\" can be used to specify the last used budget and \"default\" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget). (required)
         :param str payee_id: id of payee (required)
         :return: PayeeLocationsResponse
                  If the method is called asynchronously,

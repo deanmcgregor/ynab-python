@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import ynab
-from models.save_account import SaveAccount  # noqa: E501
+from ynab.models.save_account import SaveAccount  # noqa: E501
 from ynab.rest import ApiException
 
 
